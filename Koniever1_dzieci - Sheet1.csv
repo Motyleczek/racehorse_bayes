@@ -1,0 +1,61 @@
+dziecko id,nazwa dziecka,liczba startów,1. miejsce,2. miejsce,3. miejsce,rasa,sex,ojciecID,matkaID
+3,Thatch,11,8,0,0,TB,S,S2,D1
+4,Lisadell,5,2,1,0,TB,F,S2,D1
+5,King Pellinore,20,11,2,2,TB,S,S3,D1
+6,Marinsky,5,1,2,1,TB,M,S4,D1
+7,Baryshnikov,24,1,2,2,TB,S,S4,D1
+8,Espadrille,13,3,0,3,TB,F,S5,D1
+9,National Gallery,1,0,0,0,TB,M,S6,D1
+10,Stratford,7,1,2,0,TB,S,S7,D1
+11,Handsewn,10,1,1,1,TB,F,S8,D1
+12,Geiger Counter,7,2,3,0,TB,S,S9,D1
+13,Dusty Boots,21,2,1,8,TB,S,S9,D1
+14,Bold Ambition,35,6,5,7,TB,S,S1,D2
+15,Nanticious,10,3,1,0,TB,F,S10,D2
+16,Bold Heiress,15,4,4,3,TB,F,S1,D2
+17,Artist's Proof,33,4,3,6,TB,F,S11,D2
+18,Top Banana,12,0,0,1,TB,F,S12,D2
+19,Bold Ballerina,13,1,2,3,TB,F,S4,D2
+20,No Faith,26,5,3,2,TB,S,S14,D2
+21,No Faith,26,5,3,2,TB,S,S14,D2
+22,Jacques Who,117,6,24,18,TB,S,S15,D3
+23,La Basque,32,3,7,8,TB,F,S16,D3
+24,Glorious Quest,12,1,0,3,TB,F,S17,D3
+25,Heavenly Cause,21,9,4,2,TB,F,S15,D3
+26,Quixotic Lady,35,13,12,3,TB,F,S18,D3
+27,My Lady Love,12,2,2,1,TB,F,S19,D3
+28,Triple Bend,29,10,6,5,TB,S,S20,D4
+29,Fleeting Orbit,5,1,1,0,TB,S,S40,D4
+30,Set Right,7,2,0,0,TB,F,S20,D4
+31,Assagai Jr,30,7,4,4,TB,S,S21,D5
+32,Plum Preserves,2,0,0,0,TB,F,S21,D5
+33,Stormy Pursuit,27,5,3,2,TB,F,S22,D5
+34,One Nice Cat,9,1,0,2,TB,F,S23,D5
+35,Havildar,Unraced,-,-,-,TB,M,S41,D6
+36,Cherryville,43,5,9,6,TB,F,S24,D6
+37,Sir Gaylord,18,10,0,4,TB,S,S26,D6
+38,Court Circle,Unraced,-,-,-,TB,F,S25,D6
+39,Mostar,73,5,6,7,TB,M,S25,D6
+40,First Family,44,7,6,7,TB,S,S27,D6
+41,Swansea,10,0,0,0,TB,F,S26,D6
+42,Grand Coulee,22,5,5,5,TB,F,S27,D6
+43,Syrian Sea,26,6,3,8,TB,F,S1,D6
+44,Royal Tatan,9,1,1,0,TB,S,S28,D6
+45,Loyal Land,Unraced,-,-,-,TB,F,S29,D6
+46,The Bride,Unplaced,-,-,-,TB,F,S1,D6
+47,Secretariat,21,16,3,1,TB,S,S1,D6
+48,Capital Asset,13,3,2,1,TB,S,S27,D6
+49,Naskra,63,7,12,17,TB,S,S30,D7
+50,Tender Logic,19,3,0,2,TB,F,S31,D7
+51,Liberation Girl,4,0,0,0,TB,F,S31,D7
+52,Wajima,16,9,5,0,TB,S,S1,D7
+53,Veroushka,10,0,4,1,TB,F,S32,D7
+54,Accommodate,12,0,0,1,TB,F,S33,D7
+55,Nowmepache,78,14,6,10,TB,F,S34,D8
+56,Foolish Pleasure,26,16,4,3,TB,S,S39,D8
+57,Icecapade,32,13,6,1,TB,S,S35,D9
+58,Laughter,12,4,2,1,TB,F,S1,D9
+59,On To Glory,7,2,4,0,TB,S,S36,D9
+60,Ruffian,11,10,0,0,TB,F,S37,D9
+61,Buckfinder,21,9,9,1,TB,S,S38,D9
+62,Near East,54,14,6,9,TB,M,S5,D9
