@@ -1,0 +1,84 @@
+﻿dziecko id;nazwa dziecka;liczba startów;1. miejsce;2. miejsce;3. miejsce;rasa;sex;ojciecID;matkaID;value
+1;Thatch;11;8;0;0;TB;S;S2;D1;132,570
+2;Lisadell;5;2;1;0;TB;F;S2;D1;30,739
+3;King Pellinore;20;11;2;2;TB;S;S3;D1;631,605
+4;Marinsky;5;1;2;1;TB;M;S4;D1;8,963
+5;Baryshnikov;24;1;2;2;TB;S;S4;D1;4,799
+6;Espadrille;13;3;0;3;TB;F;S5;D1;63,228
+7;National Gallery;1;0;0;0;TB;M;S6;D1;2,332
+8;Stratford;7;1;2;0;TB;S;S7;D1;3,538
+9;Handsewn;10;1;1;1;TB;F;S8;D1;11,055
+10;Geiger Counter;7;2;3;0;TB;S;S9;D1;33,370
+11;Dusty Boots;21;2;1;8;TB;S;S9;D1;65,747
+12;Bold Ambition;35;6;5;7;TB;S;S1;D2;44,277
+13;Nanticious;10;3;1;0;TB;F;S10;D2;19,375
+14;Bold Heiress;15;4;4;3;TB;F;S1;D2;23,607
+15;Artist's Proof;33;4;3;6;TB;F;S11;D2;48,916
+16;Top Banana;12;0;0;1;TB;F;S12;D2;1,326
+17;Bold Ballerina;13;1;2;3;TB;F;S4;D2;9,065
+18;No Faith;26;5;3;2;TB;S;S14;D2;62,372
+19;Jacques Who;117;6;24;18;TB;S;S15;D3;186,740
+20;La Basque;32;3;7;8;TB;F;S16;D3;45,930
+21;Glorious Quest;12;1;0;3;TB;F;S17;D3;15,360
+22;Heavenly Cause;21;9;4;2;TB;F;S15;D3;622,481
+23;Quixotic Lady;35;13;12;3;TB;F;S18;D3;554,239
+24;My Lady Love;12;2;2;1;TB;F;S19;D3;37,021
+25;Triple Bend;29;10;6;5;TB;S;S20;D4;366,760
+26;Fleeting Orbit;5;1;1;0;TB;S;S40;D4;2,220
+27;Set Right;7;2;0;0;TB;F;S20;D4;2,883
+28;Assagai Jr;30;7;4;4;TB;S;S21;D5;136,326
+29;Stormy Pursuit;27;5;3;2;TB;F;S22;D5;27,388
+30;One Nice Cat;9;1;0;2;TB;F;S23;D5;12,675
+31;Havildar;0;0;0;0;TB;M;S41;D6;Unraced
+32;Cherryville;43;5;9;6;TB;F;S24;D6;24,515
+33;Sir Gaylord;18;10;0;4;TB;S;S26;D6;237,404
+34;Court Circle;0;0;0;0;TB;F;S25;D6;Unraced
+35;Mostar;73;5;6;7;TB;M;S25;D6;44,065
+36;First Family;44;7;6;7;TB;S;S27;D6;188,040
+37;Swansea;10;0;0;0;TB;F;S26;D6;445,000
+38;Grand Coulee;22;5;5;5;TB;F;S27;D6;52,445
+39;Syrian Sea;26;6;3;8;TB;F;S1;D6;178,245
+40;Royal Tatan;9;1;1;0;TB;S;S28;D6;6,053
+41;Loyal Land;0;0;0;0;TB;F;S29;D6;Unraced
+42;The Bride;4;0;0;0;TB;F;S1;D6;-
+43;Secretariat;21;16;3;1;TB;S;S1;D6;1,316,808
+44;Capital Asset;13;3;2;1;TB;S;S27;D6;30,184
+45;Naskra;63;7;12;17;TB;S;S30;D7;201,404
+46;Tender Logic;19;3;0;2;TB;F;S31;D7;21,070
+47;Liberation Girl;4;0;0;0;TB;F;S31;D7;0,765
+48;Wajima;16;9;5;0;TB;S;S1;D7;537,837
+49;Veroushka;10;0;4;1;TB;F;S32;D7;9,380
+50;Accommodate;12;0;0;1;TB;F;S33;D7;1,700
+51;Nowmepache;78;14;6;10;TB;F;S34;D8;20,191
+52;Foolish Pleasure;26;16;4;3;TB;S;S39;D8;1,216,705
+53;Icecapade;32;13;6;1;TB;S;S35;D9;256,468
+54;Laughter;12;4;2;1;TB;F;S1;D9;19,020
+55;On To Glory;7;2;4;0;TB;S;S36;D9;13,000
+56;Ruffian;11;10;0;0;TB;F;S37;D9;313,428
+57;Buckfinder;21;9;9;1;TB;S;S38;D9;230,513
+58;Near East;54;14;6;9;TB;M;S5;D9;209,211
+59;Davona Dale;18;11;2;1;TB;F;S43;D10;641,612
+60;No Blues;12;0;1;5;TB;F;S42;D11;8,375
+62;Davona Dale;18;11;2;1;TB;F;S43;D11;641,612
+63;Palace Gate;5;0;3;0;TB;F;S43;D11;10,780
+65;Kentucky Cookin;18;2;3;2;TB;S;S43;D11;33,375
+66;Aly's Adita;21;6;4;3;TB;F;S43;D11;150,212
+67;Eaton Row;36;6;3;1;TB;M;S43;D11;72,154
+68;Bayou Hebert;15;7;2;4;TB;S;S7;D12;106,087
+69;Alleged;10;9;1;0;TB;S;S7;D13;636,775
+70;Color Bearer;23;4;4;5;TB;S;S7;D14;132,910
+71;Crown Thy Good;25;3;6;5;TB;S;S7;D15;105,932
+72;Batteur;50;12;4;10;TB;S;S1;D16;198,984
+73;Bold Bidder;33;13;2;5;TB;S;S1;D17;478,021
+74;Bold Lad;19;14;2;1;TB;S;S1;D18;516,465
+75;Bold Tactics;62;12;13;9;TB;S;S1;D19;156,098
+76;Chinook;18;1;4;2;TB;S;S1;D20;6,321
+77;Island Charm;39;12;7;1;TB;F;S17;D21;388,286
+78;Maui Princess;26;6;3;1;TB;F;S17;D22;51,332
+79;Sailaway;3;0;0;0;TB;F;S17;D23;0,696
+80;Sun And Snow;31;4;3;5;TB;F;S17;D25;22,465
+81;Angel Island;16;6;4;3;TB;F;S23;D25;203,251
+82;Cat Song;28;2;2;6;TB;F;S24;D26;37,630
+83;First Norman;42;6;5;3;TB;S;S25;D27;570,750
+84;Gato Del Sol;39;7;9;7;TB;S;S26;D28;1,340,107
+85;Rose's Record;26;7;4;4;TB;F;S27;D29;347,893
