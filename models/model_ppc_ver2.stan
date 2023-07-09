@@ -1,77 +1,73 @@
+
+
 data{
     int N;
-    real dad_value_numeric[N];
-    vector[N] dad_num_of_starts;
-    vector[N] dad_first_place;
-    vector[N] dad_second_place;
-    vector[N] dad_third_place;
-    // vector[N] kid_value;
+    vector<lower=0>[N] dad_value_numeric;
+    vector<lower=0>[N] dad_num_of_starts;
+    vector<lower=0>[N] dad_first_place;
+    vector<lower=0>[N] dad_second_place;
+    vector<lower=0>[N] dad_third_place;
+    vector<lower=0>[N] kid_value;
 }
 
 parameters {
-    vector <lower=0> [N] a0;
-    vector <lower=0>[N] a1; 
-    real <lower=0>value_coeff;
-    real <lower=0>num_of_starts_coeff; 
-    real <lower=0>first_place_coeff;
-    real <lower=0>second_place_coeff;
-    real <lower=0>third_place_coeff;
+    real<lower=0.0> a0;
+    real<lower=0.0> a1; 
+    real<lower=0.0> value_coeff;
+    real<lower=0.0> num_of_starts_coeff; 
+    real<lower=0.0> first_place_coeff;
+    real<lower=0.0> second_place_coeff;
+    real<lower=0.0> third_place_coeff;
 }
 
 transformed parameters {
-
     // vector of calculated kid value mean
-    real <lower=0> mu[N];
+    real<lower=0> mu[N];
+    for(i in 1:N){
+        mu[i] = (value_coeff*dad_value_numeric[i]+0.00001+a0-a1+
+                        num_of_starts_coeff *dad_num_of_starts[i] +
+                        first_place_coeff * dad_first_place[i] +
+                        second_place_coeff *dad_second_place[i] +
+                        third_place_coeff * dad_third_place[i])/4;
 
-   
-
-
-    for (j in 1:N) {
-        mu[j] = value_coeff * dad_value_numeric[j]; 
-                    //   num_of_starts_coeff * dad_num_of_starts[j] +
-                    //   first_place_coeff * dad_first_place[j] +
-                    //   second_place_coeff * dad_second_place[j] +
-                    //   third_place_coeff * dad_third_place[j] ;
-                    //   +
-                    //   a0[j]-a1[j];
-        // mu[j] = fmax(0.0, raw_mu);
     }
+    
 }
 
 model {
 
-    // a0 ~ lognormal(-4.951, 0.83);
-    // a1 ~ lognormal(-4.951, 0.83);
-    value_coeff ~ exponential(2.37);
-    num_of_starts_coeff ~ lognormal(-1.48,0.71); 
-    first_place_coeff ~ lognormal(-1.40,0.59);
-    second_place_coeff ~ exponential(3.59);
-    third_place_coeff ~  exponential(6.10);
+    // value_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // num_of_starts_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // first_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // second_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // third_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // a0 ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
+    // a1 ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
 
-    // a0 ~ lognormal(-4.951, 0.83);
-    // a1 ~ lognormal(-4.951, 0.83);
-    // value_coeff ~ exponential(2.37);
-    // num_of_starts_coeff ~ lognormal(-1.48, 0.71); 
-    // first_place_coeff ~ lognormal(-1.40, 0.59);
-    // second_place_coeff ~ exponential(1 / 3.59); // Adjusted parameter for the exponential distribution
-    // third_place_coeff ~ exponential(1 / 6.10); // Adjusted parameter for the exponential distribution
-    for (j in 1:N){
-        a0[j] ~ lognormal(-4.951, 0.83);
-        a1[j] ~ lognormal(-4.951, 0.83);
-    }
+    value_coeff ~ normal(0.2,0.01);
+    num_of_starts_coeff ~ normal(0.4,0.01); 
+    first_place_coeff ~ normal(0.3,0.01);
+    second_place_coeff ~ normal(0.3,0.01);
+    third_place_coeff ~ normal(0.3,0.01);
+    a0 ~ lognormal(-1.95, 0.83);
+    a1 ~ lognormal(-1.95, 0.83);
     
 
-    // for (i in 1:N) {
-    //     kid_value[i] ~ exponential(1/mu[i]);
-    // }
+    // a0 ~ lognormal(-1.95, 0.832);
+    // a1 ~ lognormal(-1.95, 0.83);
+    for (j in 1:N){
+        kid_value[j] ~ exponential(1/mu[j]);
+    
+    }
+    
+   
 }
 
 generated quantities {
-    vector[N] kid_value_pred;
-    // vector[N] log_likelihood;
-
-    for (i in 1:N) {
-        
-        kid_value_pred[i] = exponential_rng(1/mu[i]);
+    real kid_value_p[N];
+    vector[N] log_likelihood;
+    for (j in 1:N) {
+        log_likelihood[j] = exponential_lpdf(kid_value[j] | 1/mu[j]);
+        kid_value_p[j] = exponential_rng(1/mu[j]);
     }
 }

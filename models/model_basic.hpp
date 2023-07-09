@@ -8,10 +8,22 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 3> locations_array__ = 
+static constexpr std::array<const char*, 15> locations_array__ = 
 {" (found before start of program)",
  " (in '/home/racehorse_bayes/models/model_basic.stan', line 2, column 4 to column 51)",
- " (in '/home/racehorse_bayes/models/model_basic.stan', line 5, column 4 to column 43)"};
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 3, column 4 to column 63)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 4, column 4 to column 61)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 5, column 4 to column 57)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 6, column 4 to column 56)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 7, column 4 to column 52)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 8, column 4 to column 52)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 12, column 4 to column 56)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 13, column 4 to column 63)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 14, column 4 to column 60)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 15, column 4 to column 62)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 16, column 4 to column 61)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 19, column 4 to line 23, column 51)",
+ " (in '/home/racehorse_bayes/models/model_basic.stan', line 26, column 4 to column 43)"};
 
 
 
@@ -113,14 +125,99 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      double mu = std::numeric_limits<double>::quiet_NaN();
+      double value = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 1;
-      mu = stan::math::lognormal_rng(-2.15, 1.02, base_rng__);
-      double kid_value = std::numeric_limits<double>::quiet_NaN();
+      value = stan::math::exponential_rng(2.37, base_rng__);
+      double num_of_starts = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 2;
+      num_of_starts = stan::math::lognormal_rng(-1.48, 0.71, base_rng__);
+      double first_place = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 3;
+      first_place = stan::math::lognormal_rng(-1.40, 0.59, base_rng__);
+      double second_place = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 4;
+      second_place = stan::math::exponential_rng(3.59, base_rng__);
+      double third_place = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 5;
+      third_place = stan::math::exponential_rng(6.10, base_rng__);
+      double a0 = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 6;
+      a0 = stan::math::lognormal_rng(-1.95, 0.83, base_rng__);
+      double a1 = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 7;
+      a1 = stan::math::lognormal_rng(-1.95, 0.83, base_rng__);
+      double value_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 8;
+      value_coeff = stan::math::normal_rng(0.2, 0.01, base_rng__);
+      double num_of_starts_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 9;
+      num_of_starts_coeff = stan::math::normal_rng(0.4, 0.01, base_rng__);
+      double first_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 10;
+      first_place_coeff = stan::math::normal_rng(0.3, 0.01, base_rng__);
+      double second_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 11;
+      second_place_coeff = stan::math::normal_rng(0.3, 0.01, base_rng__);
+      double third_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 12;
+      third_place_coeff = stan::math::normal_rng(0.3, 0.01, base_rng__);
+      double mu = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 13;
+      mu = (((((((((value_coeff * value) + 0.00001) + a0) - a1) +
+                 (num_of_starts_coeff * num_of_starts)) +
+                (first_place_coeff * first_place)) +
+               (second_place_coeff * second_place)) +
+              (third_place_coeff * third_place)) / 2);
+      double kid_value = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 14;
       kid_value = stan::math::exponential_rng((1 / mu), base_rng__);
       current_statement__ = 1;
+      stan::math::check_greater_or_equal(function__, "value", value, 0.0);
+      current_statement__ = 2;
+      stan::math::check_greater_or_equal(function__, "num_of_starts",
+                                            num_of_starts, 0.0);
+      current_statement__ = 3;
+      stan::math::check_greater_or_equal(function__, "first_place",
+                                            first_place, 0.0);
+      current_statement__ = 4;
+      stan::math::check_greater_or_equal(function__, "second_place",
+                                            second_place, 0.0);
+      current_statement__ = 5;
+      stan::math::check_greater_or_equal(function__, "third_place",
+                                            third_place, 0.0);
+      current_statement__ = 6;
+      stan::math::check_greater_or_equal(function__, "a0", a0, 0.0);
+      current_statement__ = 7;
+      stan::math::check_greater_or_equal(function__, "a1", a1, 0.0);
+      current_statement__ = 8;
+      stan::math::check_greater_or_equal(function__, "value_coeff",
+                                            value_coeff, 0.0);
+      current_statement__ = 9;
+      stan::math::check_greater_or_equal(function__, "num_of_starts_coeff",
+                                            num_of_starts_coeff, 0.0);
+      current_statement__ = 10;
+      stan::math::check_greater_or_equal(function__, "first_place_coeff",
+                                            first_place_coeff, 0.0);
+      current_statement__ = 11;
+      stan::math::check_greater_or_equal(function__, "second_place_coeff",
+                                            second_place_coeff, 0.0);
+      current_statement__ = 12;
+      stan::math::check_greater_or_equal(function__, "third_place_coeff",
+                                            third_place_coeff, 0.0);
+      current_statement__ = 13;
       stan::math::check_greater_or_equal(function__, "mu", mu, 0);
+      out__.write(value);
+      out__.write(num_of_starts);
+      out__.write(first_place);
+      out__.write(second_place);
+      out__.write(third_place);
+      out__.write(a0);
+      out__.write(a1);
+      out__.write(value_coeff);
+      out__.write(num_of_starts_coeff);
+      out__.write(first_place_coeff);
+      out__.write(second_place_coeff);
+      out__.write(third_place_coeff);
       out__.write(mu);
       out__.write(kid_value);
     } catch (const std::exception& e) {
@@ -150,14 +247,21 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
     
   inline void get_param_names(std::vector<std::string>& names__) const {
     
-    names__ = std::vector<std::string>{"mu", "kid_value"};
+    names__ = std::vector<std::string>{"value", "num_of_starts",
+      "first_place", "second_place", "third_place", "a0", "a1",
+      "value_coeff", "num_of_starts_coeff", "first_place_coeff",
+      "second_place_coeff", "third_place_coeff", "mu", "kid_value"};
     
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
     
     dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{},
-      std::vector<size_t>{}};
+      std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
+      }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
+      }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
+      }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
+      }, std::vector<size_t>{}};
     
     } // get_dims() 
     
@@ -173,6 +277,18 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
     }
     
     if (emit_generated_quantities__) {
+      param_names__.emplace_back(std::string() + "value");
+      param_names__.emplace_back(std::string() + "num_of_starts");
+      param_names__.emplace_back(std::string() + "first_place");
+      param_names__.emplace_back(std::string() + "second_place");
+      param_names__.emplace_back(std::string() + "third_place");
+      param_names__.emplace_back(std::string() + "a0");
+      param_names__.emplace_back(std::string() + "a1");
+      param_names__.emplace_back(std::string() + "value_coeff");
+      param_names__.emplace_back(std::string() + "num_of_starts_coeff");
+      param_names__.emplace_back(std::string() + "first_place_coeff");
+      param_names__.emplace_back(std::string() + "second_place_coeff");
+      param_names__.emplace_back(std::string() + "third_place_coeff");
       param_names__.emplace_back(std::string() + "mu");
       param_names__.emplace_back(std::string() + "kid_value");
     }
@@ -191,6 +307,18 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
     }
     
     if (emit_generated_quantities__) {
+      param_names__.emplace_back(std::string() + "value");
+      param_names__.emplace_back(std::string() + "num_of_starts");
+      param_names__.emplace_back(std::string() + "first_place");
+      param_names__.emplace_back(std::string() + "second_place");
+      param_names__.emplace_back(std::string() + "third_place");
+      param_names__.emplace_back(std::string() + "a0");
+      param_names__.emplace_back(std::string() + "a1");
+      param_names__.emplace_back(std::string() + "value_coeff");
+      param_names__.emplace_back(std::string() + "num_of_starts_coeff");
+      param_names__.emplace_back(std::string() + "first_place_coeff");
+      param_names__.emplace_back(std::string() + "second_place_coeff");
+      param_names__.emplace_back(std::string() + "third_place_coeff");
       param_names__.emplace_back(std::string() + "mu");
       param_names__.emplace_back(std::string() + "kid_value");
     }
@@ -199,13 +327,13 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -221,7 +349,8 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
       const size_t num_params__ = 0;
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  (1 + 1);
+  (((((((((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1)
+    + 1);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -242,7 +371,8 @@ class model_basic_model final : public model_base_crtp<model_basic_model> {
       const size_t num_params__ = 0;
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  (1 + 1);
+  (((((((((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1)
+    + 1);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));

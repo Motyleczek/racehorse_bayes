@@ -8,47 +8,51 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 40> locations_array__ = 
+static constexpr std::array<const char*, 44> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 12, column 4 to column 28)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 13, column 4 to column 27)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 14, column 4 to column 30)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 15, column 4 to column 38)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 16, column 4 to column 36)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 17, column 4 to column 37)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 18, column 4 to column 36)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 24, column 4 to column 25)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 30, column 8 to column 51)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 29, column 19 to line 38, column 5)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 29, column 4 to line 38, column 5)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 70, column 4 to column 29)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 75, column 8 to column 53)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 73, column 19 to line 76, column 5)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 73, column 4 to line 76, column 5)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 45, column 4 to column 36)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 46, column 4 to column 48)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 47, column 4 to column 46)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 14, column 4 to column 23)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 15, column 4 to column 23)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 16, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 17, column 4 to column 40)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 18, column 4 to column 38)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 19, column 4 to column 39)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 20, column 4 to column 38)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 25, column 4 to column 24)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 27, column 8 to line 31, column 66)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 26, column 17 to line 33, column 5)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 26, column 4 to line 33, column 5)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 67, column 4 to column 24)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 68, column 4 to column 29)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 70, column 8 to column 69)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 71, column 8 to column 50)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 69, column 19 to line 72, column 5)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 69, column 4 to line 72, column 5)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 47, column 4 to column 35)",
  " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 48, column 4 to column 43)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 49, column 4 to column 43)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 59, column 8 to column 40)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 60, column 8 to column 40)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 49, column 4 to column 41)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 50, column 4 to column 42)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 51, column 4 to column 41)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 52, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 53, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 59, column 8 to column 44)",
  " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 58, column 18 to line 61, column 5)",
  " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 58, column 4 to line 61, column 5)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 2, column 4 to column 10)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 3, column 27 to column 28)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 3, column 4 to column 30)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 4, column 11 to column 12)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 4, column 4 to column 32)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 5, column 11 to column 12)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 5, column 4 to column 30)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 6, column 11 to column 12)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 6, column 4 to column 31)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 7, column 11 to column 12)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 7, column 4 to column 30)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 12, column 22 to column 23)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 13, column 21 to column 22)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 24, column 22 to column 23)",
- " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 70, column 11 to column 12)"};
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 4, column 4 to column 10)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 5, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 5, column 4 to column 41)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 6, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 6, column 4 to column 41)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 7, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 7, column 4 to column 39)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 8, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 8, column 4 to column 40)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 9, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 9, column 4 to column 39)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 10, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 10, column 4 to column 33)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 25, column 21 to column 22)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 67, column 21 to column 22)",
+ " (in '/home/racehorse_bayes/models/model_ppc_ver2.stan', line 68, column 11 to column 12)"};
 
 
 
@@ -57,15 +61,18 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
 
  private:
   int N;
-  std::vector<double> dad_value_numeric;
+  Eigen::Matrix<double, -1, 1> dad_value_numeric__;
   Eigen::Matrix<double, -1, 1> dad_num_of_starts__;
   Eigen::Matrix<double, -1, 1> dad_first_place__;
   Eigen::Matrix<double, -1, 1> dad_second_place__;
-  Eigen::Matrix<double, -1, 1> dad_third_place__; 
+  Eigen::Matrix<double, -1, 1> dad_third_place__;
+  Eigen::Matrix<double, -1, 1> kid_value__; 
+  Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_value_numeric{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_num_of_starts{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_first_place{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_second_place{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_third_place{nullptr, 0};
+  Eigen::Map<Eigen::Matrix<double, -1, 1>> kid_value{nullptr, 0};
  
  public:
   ~model_ppc_ver2_model() { }
@@ -92,28 +99,47 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 25;
+      current_statement__ = 28;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 25;
+      current_statement__ = 28;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 26;
+      current_statement__ = 29;
       stan::math::validate_non_negative_index("dad_value_numeric", "N", N);
-      current_statement__ = 27;
+      current_statement__ = 30;
       context__.validate_dims("data initialization","dad_value_numeric",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
-      dad_value_numeric = 
-        std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
+      dad_value_numeric__ = 
+        Eigen::Matrix<double, -1, 1>::Constant(N,
+          std::numeric_limits<double>::quiet_NaN());
+      new (&dad_value_numeric) Eigen::Map<Eigen::Matrix<double, -1, 1>>(dad_value_numeric__.data(), N);
+        
       
-      
-      current_statement__ = 27;
-      dad_value_numeric = context__.vals_r("dad_value_numeric");
-      current_statement__ = 28;
+      {
+        std::vector<local_scalar_t__> dad_value_numeric_flat__;
+        current_statement__ = 30;
+        dad_value_numeric_flat__ = context__.vals_r("dad_value_numeric");
+        current_statement__ = 30;
+        pos__ = 1;
+        current_statement__ = 30;
+        for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+          current_statement__ = 30;
+          stan::model::assign(dad_value_numeric,
+            dad_value_numeric_flat__[(pos__ - 1)],
+            "assigning variable dad_value_numeric", stan::model::index_uni(sym1__));
+          current_statement__ = 30;
+          pos__ = (pos__ + 1);
+        }
+      }
+      current_statement__ = 30;
+      stan::math::check_greater_or_equal(function__, "dad_value_numeric",
+                                            dad_value_numeric, 0);
+      current_statement__ = 31;
       stan::math::validate_non_negative_index("dad_num_of_starts", "N", N);
-      current_statement__ = 29;
+      current_statement__ = 32;
       context__.validate_dims("data initialization","dad_num_of_starts",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_num_of_starts__ = 
@@ -124,23 +150,26 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
       
       {
         std::vector<local_scalar_t__> dad_num_of_starts_flat__;
-        current_statement__ = 29;
+        current_statement__ = 32;
         dad_num_of_starts_flat__ = context__.vals_r("dad_num_of_starts");
-        current_statement__ = 29;
+        current_statement__ = 32;
         pos__ = 1;
-        current_statement__ = 29;
+        current_statement__ = 32;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 29;
+          current_statement__ = 32;
           stan::model::assign(dad_num_of_starts,
             dad_num_of_starts_flat__[(pos__ - 1)],
             "assigning variable dad_num_of_starts", stan::model::index_uni(sym1__));
-          current_statement__ = 29;
+          current_statement__ = 32;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 30;
+      current_statement__ = 32;
+      stan::math::check_greater_or_equal(function__, "dad_num_of_starts",
+                                            dad_num_of_starts, 0);
+      current_statement__ = 33;
       stan::math::validate_non_negative_index("dad_first_place", "N", N);
-      current_statement__ = 31;
+      current_statement__ = 34;
       context__.validate_dims("data initialization","dad_first_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_first_place__ = 
@@ -151,23 +180,26 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
       
       {
         std::vector<local_scalar_t__> dad_first_place_flat__;
-        current_statement__ = 31;
+        current_statement__ = 34;
         dad_first_place_flat__ = context__.vals_r("dad_first_place");
-        current_statement__ = 31;
+        current_statement__ = 34;
         pos__ = 1;
-        current_statement__ = 31;
+        current_statement__ = 34;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 31;
+          current_statement__ = 34;
           stan::model::assign(dad_first_place,
             dad_first_place_flat__[(pos__ - 1)],
             "assigning variable dad_first_place", stan::model::index_uni(sym1__));
-          current_statement__ = 31;
+          current_statement__ = 34;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 32;
+      current_statement__ = 34;
+      stan::math::check_greater_or_equal(function__, "dad_first_place",
+                                            dad_first_place, 0);
+      current_statement__ = 35;
       stan::math::validate_non_negative_index("dad_second_place", "N", N);
-      current_statement__ = 33;
+      current_statement__ = 36;
       context__.validate_dims("data initialization","dad_second_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_second_place__ = 
@@ -178,23 +210,26 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
       
       {
         std::vector<local_scalar_t__> dad_second_place_flat__;
-        current_statement__ = 33;
+        current_statement__ = 36;
         dad_second_place_flat__ = context__.vals_r("dad_second_place");
-        current_statement__ = 33;
+        current_statement__ = 36;
         pos__ = 1;
-        current_statement__ = 33;
+        current_statement__ = 36;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 33;
+          current_statement__ = 36;
           stan::model::assign(dad_second_place,
             dad_second_place_flat__[(pos__ - 1)],
             "assigning variable dad_second_place", stan::model::index_uni(sym1__));
-          current_statement__ = 33;
+          current_statement__ = 36;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 34;
+      current_statement__ = 36;
+      stan::math::check_greater_or_equal(function__, "dad_second_place",
+                                            dad_second_place, 0);
+      current_statement__ = 37;
       stan::math::validate_non_negative_index("dad_third_place", "N", N);
-      current_statement__ = 35;
+      current_statement__ = 38;
       context__.validate_dims("data initialization","dad_third_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_third_place__ = 
@@ -205,32 +240,62 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
       
       {
         std::vector<local_scalar_t__> dad_third_place_flat__;
-        current_statement__ = 35;
+        current_statement__ = 38;
         dad_third_place_flat__ = context__.vals_r("dad_third_place");
-        current_statement__ = 35;
+        current_statement__ = 38;
         pos__ = 1;
-        current_statement__ = 35;
+        current_statement__ = 38;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 35;
+          current_statement__ = 38;
           stan::model::assign(dad_third_place,
             dad_third_place_flat__[(pos__ - 1)],
             "assigning variable dad_third_place", stan::model::index_uni(sym1__));
-          current_statement__ = 35;
+          current_statement__ = 38;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 36;
-      stan::math::validate_non_negative_index("a0", "N", N);
-      current_statement__ = 37;
-      stan::math::validate_non_negative_index("a1", "N", N);
       current_statement__ = 38;
-      stan::math::validate_non_negative_index("mu", "N", N);
+      stan::math::check_greater_or_equal(function__, "dad_third_place",
+                                            dad_third_place, 0);
       current_statement__ = 39;
-      stan::math::validate_non_negative_index("kid_value_pred", "N", N);
+      stan::math::validate_non_negative_index("kid_value", "N", N);
+      current_statement__ = 40;
+      context__.validate_dims("data initialization","kid_value","double",
+           std::vector<size_t>{static_cast<size_t>(N)});
+      kid_value__ = 
+        Eigen::Matrix<double, -1, 1>::Constant(N,
+          std::numeric_limits<double>::quiet_NaN());
+      new (&kid_value) Eigen::Map<Eigen::Matrix<double, -1, 1>>(kid_value__.data(), N);
+        
+      
+      {
+        std::vector<local_scalar_t__> kid_value_flat__;
+        current_statement__ = 40;
+        kid_value_flat__ = context__.vals_r("kid_value");
+        current_statement__ = 40;
+        pos__ = 1;
+        current_statement__ = 40;
+        for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+          current_statement__ = 40;
+          stan::model::assign(kid_value, kid_value_flat__[(pos__ - 1)],
+            "assigning variable kid_value", stan::model::index_uni(sym1__));
+          current_statement__ = 40;
+          pos__ = (pos__ + 1);
+        }
+      }
+      current_statement__ = 40;
+      stan::math::check_greater_or_equal(function__, "kid_value", kid_value,
+                                            0);
+      current_statement__ = 41;
+      stan::math::validate_non_negative_index("mu", "N", N);
+      current_statement__ = 42;
+      stan::math::validate_non_negative_index("kid_value_p", "N", N);
+      current_statement__ = 43;
+      stan::math::validate_non_negative_index("log_likelihood", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
-    num_params_r__ = N + N + 1 + 1 + 1 + 1 + 1;
+    num_params_r__ = 1 + 1 + 1 + 1 + 1 + 1 + 1;
     
   }
   
@@ -252,79 +317,88 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     (void) function__;  // suppress unused var warning
     
     try {
-      Eigen::Matrix<local_scalar_t__, -1, 1> a0 =
-         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
+      local_scalar_t__ a0 = DUMMY_VAR__;
       current_statement__ = 1;
-      a0 = in__.template read_constrain_lb<
-             Eigen::Matrix<local_scalar_t__, -1, 1>, jacobian__>(0, lp__, N);
-      Eigen::Matrix<local_scalar_t__, -1, 1> a1 =
-         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
+      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+             lp__);
+      local_scalar_t__ a1 = DUMMY_VAR__;
       current_statement__ = 2;
-      a1 = in__.template read_constrain_lb<
-             Eigen::Matrix<local_scalar_t__, -1, 1>, jacobian__>(0, lp__, N);
+      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+             lp__);
       local_scalar_t__ value_coeff = DUMMY_VAR__;
       current_statement__ = 3;
       value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                      jacobian__>(0, lp__);
+                      jacobian__>(0.0, lp__);
       local_scalar_t__ num_of_starts_coeff = DUMMY_VAR__;
       current_statement__ = 4;
       num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                              jacobian__>(0, lp__);
+                              jacobian__>(0.0, lp__);
       local_scalar_t__ first_place_coeff = DUMMY_VAR__;
       current_statement__ = 5;
       first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0, lp__);
+                            jacobian__>(0.0, lp__);
       local_scalar_t__ second_place_coeff = DUMMY_VAR__;
       current_statement__ = 6;
       second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                             jacobian__>(0, lp__);
+                             jacobian__>(0.0, lp__);
       local_scalar_t__ third_place_coeff = DUMMY_VAR__;
       current_statement__ = 7;
       third_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0, lp__);
+                            jacobian__>(0.0, lp__);
       std::vector<local_scalar_t__> mu =
          std::vector<local_scalar_t__>(N, DUMMY_VAR__);
       current_statement__ = 11;
-      for (int j = 1; j <= N; ++j) {
+      for (int i = 1; i <= N; ++i) {
         current_statement__ = 9;
         stan::model::assign(mu,
-          (value_coeff *
-            stan::model::rvalue(dad_value_numeric, "dad_value_numeric",
-              stan::model::index_uni(j))),
-          "assigning variable mu", stan::model::index_uni(j));
+          (((((((((value_coeff *
+                    stan::model::rvalue(dad_value_numeric,
+                      "dad_value_numeric", stan::model::index_uni(i))) +
+                   0.00001) + a0) - a1) +
+                (num_of_starts_coeff *
+                  stan::model::rvalue(dad_num_of_starts, "dad_num_of_starts",
+                    stan::model::index_uni(i)))) +
+               (first_place_coeff *
+                 stan::model::rvalue(dad_first_place, "dad_first_place",
+                   stan::model::index_uni(i)))) +
+              (second_place_coeff *
+                stan::model::rvalue(dad_second_place, "dad_second_place",
+                  stan::model::index_uni(i)))) +
+             (third_place_coeff *
+               stan::model::rvalue(dad_third_place, "dad_third_place",
+                 stan::model::index_uni(i)))) / 4),
+          "assigning variable mu", stan::model::index_uni(i));
       }
       current_statement__ = 8;
       stan::math::check_greater_or_equal(function__, "mu", mu, 0);
       {
-        current_statement__ = 16;
-        lp_accum__.add(
-          stan::math::exponential_lpdf<propto__>(value_coeff, 2.37));
-        current_statement__ = 17;
-        lp_accum__.add(
-          stan::math::lognormal_lpdf<propto__>(num_of_starts_coeff, -1.48,
-            0.71));
         current_statement__ = 18;
         lp_accum__.add(
-          stan::math::lognormal_lpdf<propto__>(first_place_coeff, -1.40,
-            0.59));
+          stan::math::normal_lpdf<propto__>(value_coeff, 0.2, 0.01));
         current_statement__ = 19;
         lp_accum__.add(
-          stan::math::exponential_lpdf<propto__>(second_place_coeff, 3.59));
+          stan::math::normal_lpdf<propto__>(num_of_starts_coeff, 0.4, 0.01));
         current_statement__ = 20;
         lp_accum__.add(
-          stan::math::exponential_lpdf<propto__>(third_place_coeff, 6.10));
+          stan::math::normal_lpdf<propto__>(first_place_coeff, 0.3, 0.01));
+        current_statement__ = 21;
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(second_place_coeff, 0.3, 0.01));
+        current_statement__ = 22;
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(third_place_coeff, 0.3, 0.01));
+        current_statement__ = 23;
+        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a0, -1.95, 0.83));
         current_statement__ = 24;
+        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a1, -1.95, 0.83));
+        current_statement__ = 27;
         for (int j = 1; j <= N; ++j) {
-          current_statement__ = 21;
+          current_statement__ = 25;
           lp_accum__.add(
-            stan::math::lognormal_lpdf<propto__>(
-              stan::model::rvalue(a0, "a0", stan::model::index_uni(j)),
-              -4.951, 0.83));
-          current_statement__ = 22;
-          lp_accum__.add(
-            stan::math::lognormal_lpdf<propto__>(
-              stan::model::rvalue(a1, "a1", stan::model::index_uni(j)),
-              -4.951, 0.83));
+            stan::math::exponential_lpdf<propto__>(
+              stan::model::rvalue(kid_value, "kid_value",
+                stan::model::index_uni(j)),
+              (1 / stan::model::rvalue(mu, "mu", stan::model::index_uni(j)))));
         }
       }
     } catch (const std::exception& e) {
@@ -359,38 +433,34 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     (void) function__;  // suppress unused var warning
     
     try {
-      Eigen::Matrix<double, -1, 1> a0 =
-         Eigen::Matrix<double, -1, 1>::Constant(N,
-           std::numeric_limits<double>::quiet_NaN());
+      double a0 = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 1;
-      a0 = in__.template read_constrain_lb<
-             Eigen::Matrix<local_scalar_t__, -1, 1>, jacobian__>(0, lp__, N);
-      Eigen::Matrix<double, -1, 1> a1 =
-         Eigen::Matrix<double, -1, 1>::Constant(N,
-           std::numeric_limits<double>::quiet_NaN());
+      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+             lp__);
+      double a1 = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 2;
-      a1 = in__.template read_constrain_lb<
-             Eigen::Matrix<local_scalar_t__, -1, 1>, jacobian__>(0, lp__, N);
+      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+             lp__);
       double value_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 3;
       value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                      jacobian__>(0, lp__);
+                      jacobian__>(0.0, lp__);
       double num_of_starts_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 4;
       num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                              jacobian__>(0, lp__);
+                              jacobian__>(0.0, lp__);
       double first_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 5;
       first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0, lp__);
+                            jacobian__>(0.0, lp__);
       double second_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 6;
       second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                             jacobian__>(0, lp__);
+                             jacobian__>(0.0, lp__);
       double third_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 7;
       third_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0, lp__);
+                            jacobian__>(0.0, lp__);
       std::vector<double> mu =
          std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       out__.write(a0);
@@ -406,13 +476,26 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
         return ;
       } 
       current_statement__ = 11;
-      for (int j = 1; j <= N; ++j) {
+      for (int i = 1; i <= N; ++i) {
         current_statement__ = 9;
         stan::model::assign(mu,
-          (value_coeff *
-            stan::model::rvalue(dad_value_numeric, "dad_value_numeric",
-              stan::model::index_uni(j))),
-          "assigning variable mu", stan::model::index_uni(j));
+          (((((((((value_coeff *
+                    stan::model::rvalue(dad_value_numeric,
+                      "dad_value_numeric", stan::model::index_uni(i))) +
+                   0.00001) + a0) - a1) +
+                (num_of_starts_coeff *
+                  stan::model::rvalue(dad_num_of_starts, "dad_num_of_starts",
+                    stan::model::index_uni(i)))) +
+               (first_place_coeff *
+                 stan::model::rvalue(dad_first_place, "dad_first_place",
+                   stan::model::index_uni(i)))) +
+              (second_place_coeff *
+                stan::model::rvalue(dad_second_place, "dad_second_place",
+                  stan::model::index_uni(i)))) +
+             (third_place_coeff *
+               stan::model::rvalue(dad_third_place, "dad_third_place",
+                 stan::model::index_uni(i)))) / 4),
+          "assigning variable mu", stan::model::index_uni(i));
       }
       current_statement__ = 8;
       stan::math::check_greater_or_equal(function__, "mu", mu, 0);
@@ -422,19 +505,29 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      Eigen::Matrix<double, -1, 1> kid_value_pred =
+      std::vector<double> kid_value_p =
+         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, 1> log_likelihood =
          Eigen::Matrix<double, -1, 1>::Constant(N,
            std::numeric_limits<double>::quiet_NaN());
-      current_statement__ = 15;
-      for (int i = 1; i <= N; ++i) {
-        current_statement__ = 13;
-        stan::model::assign(kid_value_pred,
+      current_statement__ = 17;
+      for (int j = 1; j <= N; ++j) {
+        current_statement__ = 14;
+        stan::model::assign(log_likelihood,
+          stan::math::exponential_lpdf<false>(
+            stan::model::rvalue(kid_value, "kid_value",
+              stan::model::index_uni(j)),
+            (1 / stan::model::rvalue(mu, "mu", stan::model::index_uni(j)))),
+          "assigning variable log_likelihood", stan::model::index_uni(j));
+        current_statement__ = 15;
+        stan::model::assign(kid_value_p,
           stan::math::exponential_rng(
-            (1 / stan::model::rvalue(mu, "mu", stan::model::index_uni(i))),
+            (1 / stan::model::rvalue(mu, "mu", stan::model::index_uni(j))),
             base_rng__),
-          "assigning variable kid_value_pred", stan::model::index_uni(i));
+          "assigning variable kid_value_p", stan::model::index_uni(j));
       }
-      out__.write(kid_value_pred);
+      out__.write(kid_value_p);
+      out__.write(log_likelihood);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -455,35 +548,27 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      Eigen::Matrix<local_scalar_t__, -1, 1> a0 =
-         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        stan::model::assign(a0, in__.read<local_scalar_t__>(),
-          "assigning variable a0", stan::model::index_uni(sym1__));
-      }
-      out__.write_free_lb(0, a0);
-      Eigen::Matrix<local_scalar_t__, -1, 1> a1 =
-         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        stan::model::assign(a1, in__.read<local_scalar_t__>(),
-          "assigning variable a1", stan::model::index_uni(sym1__));
-      }
-      out__.write_free_lb(0, a1);
+      local_scalar_t__ a0 = DUMMY_VAR__;
+      a0 = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0.0, a0);
+      local_scalar_t__ a1 = DUMMY_VAR__;
+      a1 = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0.0, a1);
       local_scalar_t__ value_coeff = DUMMY_VAR__;
       value_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0, value_coeff);
+      out__.write_free_lb(0.0, value_coeff);
       local_scalar_t__ num_of_starts_coeff = DUMMY_VAR__;
       num_of_starts_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0, num_of_starts_coeff);
+      out__.write_free_lb(0.0, num_of_starts_coeff);
       local_scalar_t__ first_place_coeff = DUMMY_VAR__;
       first_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0, first_place_coeff);
+      out__.write_free_lb(0.0, first_place_coeff);
       local_scalar_t__ second_place_coeff = DUMMY_VAR__;
       second_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0, second_place_coeff);
+      out__.write_free_lb(0.0, second_place_coeff);
       local_scalar_t__ third_place_coeff = DUMMY_VAR__;
       third_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0, third_place_coeff);
+      out__.write_free_lb(0.0, third_place_coeff);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -493,18 +578,17 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     
     names__ = std::vector<std::string>{"a0", "a1", "value_coeff",
       "num_of_starts_coeff", "first_place_coeff", "second_place_coeff",
-      "third_place_coeff", "mu", "kid_value_pred"};
+      "third_place_coeff", "mu", "kid_value_p", "log_likelihood"};
     
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
     
-    dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{
-                                                                   static_cast<size_t>(N)
-                                                                   },
-      std::vector<size_t>{static_cast<size_t>(N)}, std::vector<size_t>{
+    dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{},
+      std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
       }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
-      }, std::vector<size_t>{}, std::vector<size_t>{static_cast<size_t>(N)},
+      }, std::vector<size_t>{static_cast<size_t>(N)},
+      std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)}};
     
     } // get_dims() 
@@ -515,16 +599,8 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
                                       bool emit_generated_quantities__ = true) const
     final {
     
-    for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-      {
-        param_names__.emplace_back(std::string() + "a0" + '.' + std::to_string(sym1__));
-      } 
-    }
-    for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-      {
-        param_names__.emplace_back(std::string() + "a1" + '.' + std::to_string(sym1__));
-      } 
-    }
+    param_names__.emplace_back(std::string() + "a0");
+    param_names__.emplace_back(std::string() + "a1");
     param_names__.emplace_back(std::string() + "value_coeff");
     param_names__.emplace_back(std::string() + "num_of_starts_coeff");
     param_names__.emplace_back(std::string() + "first_place_coeff");
@@ -541,7 +617,12 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "kid_value_pred" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "kid_value_p" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_likelihood" + '.' + std::to_string(sym1__));
         } 
       }
     }
@@ -554,16 +635,8 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
                                         bool emit_generated_quantities__ = true) const
     final {
     
-    for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-      {
-        param_names__.emplace_back(std::string() + "a0" + '.' + std::to_string(sym1__));
-      } 
-    }
-    for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-      {
-        param_names__.emplace_back(std::string() + "a1" + '.' + std::to_string(sym1__));
-      } 
-    }
+    param_names__.emplace_back(std::string() + "a0");
+    param_names__.emplace_back(std::string() + "a1");
     param_names__.emplace_back(std::string() + "value_coeff");
     param_names__.emplace_back(std::string() + "num_of_starts_coeff");
     param_names__.emplace_back(std::string() + "first_place_coeff");
@@ -580,7 +653,12 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "kid_value_pred" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "kid_value_p" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_likelihood" + '.' + std::to_string(sym1__));
         } 
       }
     }
@@ -589,13 +667,13 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_pred\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"log_likelihood\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_pred\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"log_likelihood\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -609,9 +687,10 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
                             const bool emit_generated_quantities = true,
                             std::ostream* pstream = nullptr) const {
       const size_t num_params__ = 
-  ((((((N + N) + 1) + 1) + 1) + 1) + 1);
+  ((((((1 + 1) + 1) + 1) + 1) + 1) + 1);
       const size_t num_transformed = N;
-      const size_t num_gen_quantities = N;
+      const size_t num_gen_quantities = 
+  (N + N);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -630,9 +709,10 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
                             bool emit_generated_quantities = true,
                             std::ostream* pstream = nullptr) const {
       const size_t num_params__ = 
-  ((((((N + N) + 1) + 1) + 1) + 1) + 1);
+  ((((((1 + 1) + 1) + 1) + 1) + 1) + 1);
       const size_t num_transformed = N;
-      const size_t num_gen_quantities = N;
+      const size_t num_gen_quantities = 
+  (N + N);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));
@@ -671,7 +751,7 @@ class model_ppc_ver2_model final : public model_base_crtp<model_ppc_ver2_model> 
      constexpr std::array<const char*, 7> names__{"a0", "a1", "value_coeff",
       "num_of_starts_coeff", "first_place_coeff", "second_place_coeff",
       "third_place_coeff"};
-      const std::array<Eigen::Index, 7> constrain_param_sizes__{N, N, 
+      const std::array<Eigen::Index, 7> constrain_param_sizes__{1, 1, 
        1, 1, 1, 1, 1};
       const auto num_constrained_params__ = std::accumulate(
         constrain_param_sizes__.begin(), constrain_param_sizes__.end(), 0);
