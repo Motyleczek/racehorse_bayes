@@ -1,6 +1,4 @@
-
-
-data{
+data{    
     int N;
     vector<lower=0>[N] dad_value_numeric;
     vector<lower=0>[N] dad_num_of_starts;
@@ -11,6 +9,7 @@ data{
 }
 
 parameters {
+
     real<lower=0.0> a0;
     real<lower=0.0> a1; 
     real<lower=0.0> value_coeff;
@@ -21,7 +20,7 @@ parameters {
 }
 
 transformed parameters {
-    // vector of calculated kid value mean
+
     real<lower=0> mu[N];
     for(i in 1:N){
         mu[i] = (value_coeff*dad_value_numeric[i]+0.00001+a0-a1+
@@ -36,14 +35,6 @@ transformed parameters {
 
 model {
 
-    // value_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // num_of_starts_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // first_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // second_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // third_place_coeff ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // a0 ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-    // a1 ~ exponential(2); // Adjusted to approximate an exponential distribution with mean 2
-
     value_coeff ~ normal(0.2,0.01);
     num_of_starts_coeff ~ normal(0.4,0.01); 
     first_place_coeff ~ normal(0.3,0.01);
@@ -52,9 +43,6 @@ model {
     a0 ~ lognormal(-1.95, 0.83);
     a1 ~ lognormal(-1.95, 0.83);
     
-
-    // a0 ~ lognormal(-1.95, 0.832);
-    // a1 ~ lognormal(-1.95, 0.83);
     for (j in 1:N){
         kid_value[j] ~ exponential(1/mu[j]);
     

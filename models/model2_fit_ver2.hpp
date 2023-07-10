@@ -8,42 +8,48 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 52> locations_array__ = 
+static constexpr std::array<const char*, 60> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 13, column 4 to column 23)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 14, column 4 to column 23)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 15, column 4 to column 23)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 16, column 4 to column 32)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 17, column 4 to column 40)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 18, column 4 to column 38)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 19, column 4 to column 39)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 20, column 4 to column 38)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 24, column 4 to column 25)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 25, column 4 to column 28)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 26, column 4 to column 18)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 27, column 4 to column 21)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 34, column 8 to line 38, column 74)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 40, column 8 to column 26)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 41, column 8 to column 20)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 43, column 8 to column 24)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 31, column 17 to line 52, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 31, column 4 to line 52, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 95, column 4 to column 24)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 101, column 8 to column 60)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 98, column 19 to line 103, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 98, column 4 to line 103, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 66, column 4 to column 36)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 67, column 4 to column 44)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 68, column 4 to column 42)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 69, column 4 to column 43)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 70, column 4 to column 42)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 71, column 4 to column 32)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 72, column 4 to column 32)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 73, column 4 to column 32)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 79, column 8 to column 56)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 78, column 18 to line 83, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 78, column 4 to line 83, column 5)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 2, column 4 to column 10)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 15, column 4 to column 26)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 16, column 4 to column 24)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 18, column 4 to column 21)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 19, column 4 to column 21)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 21, column 4 to column 30)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 22, column 4 to column 38)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 23, column 4 to column 36)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 24, column 4 to column 37)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 25, column 4 to column 36)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 27, column 4 to column 25)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 28, column 4 to column 25)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 32, column 4 to column 28)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 33, column 4 to column 17)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 34, column 4 to column 20)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 36, column 8 to line 40, column 73)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 41, column 8 to column 131)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 42, column 8 to column 86)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 35, column 17 to line 43, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 35, column 4 to line 43, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 65, column 4 to column 35)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 66, column 4 to column 29)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 68, column 8 to column 75)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 69, column 8 to column 55)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 67, column 19 to line 70, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 67, column 4 to line 70, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 47, column 4 to column 36)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 48, column 4 to column 44)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 49, column 4 to column 42)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 50, column 4 to column 43)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 51, column 4 to column 42)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 52, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 53, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 54, column 4 to column 32)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 55, column 4 to column 27)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 56, column 4 to column 31)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 57, column 4 to column 33)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 60, column 8 to column 50)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 59, column 18 to line 61, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 59, column 4 to line 61, column 5)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 3, column 4 to column 10)",
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 4, column 20 to column 21)",
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 4, column 4 to column 41)",
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 5, column 20 to column 21)",
@@ -56,11 +62,13 @@ static constexpr std::array<const char*, 52> locations_array__ =
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 8, column 4 to column 39)",
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 9, column 20 to column 21)",
  " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 9, column 4 to column 33)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 24, column 22 to column 23)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 25, column 25 to column 26)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 26, column 15 to column 16)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 27, column 18 to column 19)",
- " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 95, column 21 to column 22)"};
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 10, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 10, column 4 to column 44)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 32, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 33, column 11 to column 12)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 34, column 11 to column 12)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 65, column 20 to column 21)",
+ " (in '/home/racehorse_bayes/models/model2_fit_ver2.stan', line 66, column 11 to column 12)"};
 
 
 
@@ -74,13 +82,15 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
   Eigen::Matrix<double, -1, 1> dad_first_place__;
   Eigen::Matrix<double, -1, 1> dad_second_place__;
   Eigen::Matrix<double, -1, 1> dad_third_place__;
-  Eigen::Matrix<double, -1, 1> kid_value__; 
+  Eigen::Matrix<double, -1, 1> kid_value__;
+  Eigen::Matrix<double, -1, 1> potential_to_be_rich__; 
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_value_numeric{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_num_of_starts{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_first_place{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_second_place{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> dad_third_place{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> kid_value{nullptr, 0};
+  Eigen::Map<Eigen::Matrix<double, -1, 1>> potential_to_be_rich{nullptr, 0};
  
  public:
   ~model2_fit_ver2_model() { }
@@ -107,17 +117,17 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 34;
+      current_statement__ = 40;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 34;
+      current_statement__ = 40;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 35;
+      current_statement__ = 41;
       stan::math::validate_non_negative_index("dad_value_numeric", "N", N);
-      current_statement__ = 36;
+      current_statement__ = 42;
       context__.validate_dims("data initialization","dad_value_numeric",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_value_numeric__ = 
@@ -128,26 +138,26 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> dad_value_numeric_flat__;
-        current_statement__ = 36;
+        current_statement__ = 42;
         dad_value_numeric_flat__ = context__.vals_r("dad_value_numeric");
-        current_statement__ = 36;
+        current_statement__ = 42;
         pos__ = 1;
-        current_statement__ = 36;
+        current_statement__ = 42;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 36;
+          current_statement__ = 42;
           stan::model::assign(dad_value_numeric,
             dad_value_numeric_flat__[(pos__ - 1)],
             "assigning variable dad_value_numeric", stan::model::index_uni(sym1__));
-          current_statement__ = 36;
+          current_statement__ = 42;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 36;
+      current_statement__ = 42;
       stan::math::check_greater_or_equal(function__, "dad_value_numeric",
                                             dad_value_numeric, 0);
-      current_statement__ = 37;
+      current_statement__ = 43;
       stan::math::validate_non_negative_index("dad_num_of_starts", "N", N);
-      current_statement__ = 38;
+      current_statement__ = 44;
       context__.validate_dims("data initialization","dad_num_of_starts",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_num_of_starts__ = 
@@ -158,26 +168,26 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> dad_num_of_starts_flat__;
-        current_statement__ = 38;
+        current_statement__ = 44;
         dad_num_of_starts_flat__ = context__.vals_r("dad_num_of_starts");
-        current_statement__ = 38;
+        current_statement__ = 44;
         pos__ = 1;
-        current_statement__ = 38;
+        current_statement__ = 44;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 38;
+          current_statement__ = 44;
           stan::model::assign(dad_num_of_starts,
             dad_num_of_starts_flat__[(pos__ - 1)],
             "assigning variable dad_num_of_starts", stan::model::index_uni(sym1__));
-          current_statement__ = 38;
+          current_statement__ = 44;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 38;
+      current_statement__ = 44;
       stan::math::check_greater_or_equal(function__, "dad_num_of_starts",
                                             dad_num_of_starts, 0);
-      current_statement__ = 39;
+      current_statement__ = 45;
       stan::math::validate_non_negative_index("dad_first_place", "N", N);
-      current_statement__ = 40;
+      current_statement__ = 46;
       context__.validate_dims("data initialization","dad_first_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_first_place__ = 
@@ -188,26 +198,26 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> dad_first_place_flat__;
-        current_statement__ = 40;
+        current_statement__ = 46;
         dad_first_place_flat__ = context__.vals_r("dad_first_place");
-        current_statement__ = 40;
+        current_statement__ = 46;
         pos__ = 1;
-        current_statement__ = 40;
+        current_statement__ = 46;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 40;
+          current_statement__ = 46;
           stan::model::assign(dad_first_place,
             dad_first_place_flat__[(pos__ - 1)],
             "assigning variable dad_first_place", stan::model::index_uni(sym1__));
-          current_statement__ = 40;
+          current_statement__ = 46;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 40;
+      current_statement__ = 46;
       stan::math::check_greater_or_equal(function__, "dad_first_place",
                                             dad_first_place, 0);
-      current_statement__ = 41;
+      current_statement__ = 47;
       stan::math::validate_non_negative_index("dad_second_place", "N", N);
-      current_statement__ = 42;
+      current_statement__ = 48;
       context__.validate_dims("data initialization","dad_second_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_second_place__ = 
@@ -218,26 +228,26 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> dad_second_place_flat__;
-        current_statement__ = 42;
+        current_statement__ = 48;
         dad_second_place_flat__ = context__.vals_r("dad_second_place");
-        current_statement__ = 42;
+        current_statement__ = 48;
         pos__ = 1;
-        current_statement__ = 42;
+        current_statement__ = 48;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 42;
+          current_statement__ = 48;
           stan::model::assign(dad_second_place,
             dad_second_place_flat__[(pos__ - 1)],
             "assigning variable dad_second_place", stan::model::index_uni(sym1__));
-          current_statement__ = 42;
+          current_statement__ = 48;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 42;
+      current_statement__ = 48;
       stan::math::check_greater_or_equal(function__, "dad_second_place",
                                             dad_second_place, 0);
-      current_statement__ = 43;
+      current_statement__ = 49;
       stan::math::validate_non_negative_index("dad_third_place", "N", N);
-      current_statement__ = 44;
+      current_statement__ = 50;
       context__.validate_dims("data initialization","dad_third_place",
           "double", std::vector<size_t>{static_cast<size_t>(N)});
       dad_third_place__ = 
@@ -248,26 +258,26 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> dad_third_place_flat__;
-        current_statement__ = 44;
+        current_statement__ = 50;
         dad_third_place_flat__ = context__.vals_r("dad_third_place");
-        current_statement__ = 44;
+        current_statement__ = 50;
         pos__ = 1;
-        current_statement__ = 44;
+        current_statement__ = 50;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 44;
+          current_statement__ = 50;
           stan::model::assign(dad_third_place,
             dad_third_place_flat__[(pos__ - 1)],
             "assigning variable dad_third_place", stan::model::index_uni(sym1__));
-          current_statement__ = 44;
+          current_statement__ = 50;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 44;
+      current_statement__ = 50;
       stan::math::check_greater_or_equal(function__, "dad_third_place",
                                             dad_third_place, 0);
-      current_statement__ = 45;
+      current_statement__ = 51;
       stan::math::validate_non_negative_index("kid_value", "N", N);
-      current_statement__ = 46;
+      current_statement__ = 52;
       context__.validate_dims("data initialization","kid_value","double",
            std::vector<size_t>{static_cast<size_t>(N)});
       kid_value__ = 
@@ -278,36 +288,66 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
       
       {
         std::vector<local_scalar_t__> kid_value_flat__;
-        current_statement__ = 46;
+        current_statement__ = 52;
         kid_value_flat__ = context__.vals_r("kid_value");
-        current_statement__ = 46;
+        current_statement__ = 52;
         pos__ = 1;
-        current_statement__ = 46;
+        current_statement__ = 52;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 46;
+          current_statement__ = 52;
           stan::model::assign(kid_value, kid_value_flat__[(pos__ - 1)],
             "assigning variable kid_value", stan::model::index_uni(sym1__));
-          current_statement__ = 46;
+          current_statement__ = 52;
           pos__ = (pos__ + 1);
         }
       }
-      current_statement__ = 46;
+      current_statement__ = 52;
       stan::math::check_greater_or_equal(function__, "kid_value", kid_value,
                                             0);
-      current_statement__ = 47;
+      current_statement__ = 53;
+      stan::math::validate_non_negative_index("potential_to_be_rich", "N", N);
+      current_statement__ = 54;
+      context__.validate_dims("data initialization","potential_to_be_rich",
+          "double", std::vector<size_t>{static_cast<size_t>(N)});
+      potential_to_be_rich__ = 
+        Eigen::Matrix<double, -1, 1>::Constant(N,
+          std::numeric_limits<double>::quiet_NaN());
+      new (&potential_to_be_rich) Eigen::Map<Eigen::Matrix<double, -1, 1>>(potential_to_be_rich__.data(), N);
+        
+      
+      {
+        std::vector<local_scalar_t__> potential_to_be_rich_flat__;
+        current_statement__ = 54;
+        potential_to_be_rich_flat__ = context__.vals_r("potential_to_be_rich");
+        current_statement__ = 54;
+        pos__ = 1;
+        current_statement__ = 54;
+        for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+          current_statement__ = 54;
+          stan::model::assign(potential_to_be_rich,
+            potential_to_be_rich_flat__[(pos__ - 1)],
+            "assigning variable potential_to_be_rich", stan::model::index_uni(sym1__));
+          current_statement__ = 54;
+          pos__ = (pos__ + 1);
+        }
+      }
+      current_statement__ = 54;
+      stan::math::check_greater_or_equal(function__, "potential_to_be_rich",
+                                            potential_to_be_rich, 0);
+      current_statement__ = 55;
+      stan::math::validate_non_negative_index("mu_x", "N", N);
+      current_statement__ = 56;
       stan::math::validate_non_negative_index("mu", "N", N);
-      current_statement__ = 48;
+      current_statement__ = 57;
       stan::math::validate_non_negative_index("sigma", "N", N);
-      current_statement__ = 49;
-      stan::math::validate_non_negative_index("mulog", "N", N);
-      current_statement__ = 50;
-      stan::math::validate_non_negative_index("sigmalog", "N", N);
-      current_statement__ = 51;
+      current_statement__ = 58;
       stan::math::validate_non_negative_index("kid_value_p", "N", N);
+      current_statement__ = 59;
+      stan::math::validate_non_negative_index("log_likelihood", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
-    num_params_r__ = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
+    num_params_r__ = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
     
   }
   
@@ -329,50 +369,60 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     (void) function__;  // suppress unused var warning
     
     try {
-      local_scalar_t__ a0 = DUMMY_VAR__;
+      local_scalar_t__ sigma_x = DUMMY_VAR__;
       current_statement__ = 1;
-      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+      sigma_x = in__.template read_constrain_lb<local_scalar_t__, 
+                  jacobian__>(0, lp__);
+      local_scalar_t__ theta = DUMMY_VAR__;
+      current_statement__ = 2;
+      theta = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                0, lp__);
+      local_scalar_t__ a0 = DUMMY_VAR__;
+      current_statement__ = 3;
+      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0,
              lp__);
       local_scalar_t__ a1 = DUMMY_VAR__;
-      current_statement__ = 2;
-      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
-             lp__);
-      local_scalar_t__ a2 = DUMMY_VAR__;
-      current_statement__ = 3;
-      a2 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+      current_statement__ = 4;
+      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0,
              lp__);
       local_scalar_t__ value_coeff = DUMMY_VAR__;
-      current_statement__ = 4;
-      value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                      jacobian__>(0.0, lp__);
-      local_scalar_t__ num_of_starts_coeff = DUMMY_VAR__;
       current_statement__ = 5;
-      num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                              jacobian__>(0.0, lp__);
-      local_scalar_t__ first_place_coeff = DUMMY_VAR__;
+      value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                      jacobian__>(0, lp__);
+      local_scalar_t__ num_of_starts_coeff = DUMMY_VAR__;
       current_statement__ = 6;
-      first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0.0, lp__);
-      local_scalar_t__ second_place_coeff = DUMMY_VAR__;
+      num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                              jacobian__>(0, lp__);
+      local_scalar_t__ first_place_coeff = DUMMY_VAR__;
       current_statement__ = 7;
-      second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                             jacobian__>(0.0, lp__);
-      local_scalar_t__ third_place_coeff = DUMMY_VAR__;
+      first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                            jacobian__>(0, lp__);
+      local_scalar_t__ second_place_coeff = DUMMY_VAR__;
       current_statement__ = 8;
+      second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                             jacobian__>(0, lp__);
+      local_scalar_t__ third_place_coeff = DUMMY_VAR__;
+      current_statement__ = 9;
       third_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0.0, lp__);
-      std::vector<local_scalar_t__> mu =
-         std::vector<local_scalar_t__>(N, DUMMY_VAR__);
-      std::vector<local_scalar_t__> sigma =
-         std::vector<local_scalar_t__>(N, DUMMY_VAR__);
-      std::vector<local_scalar_t__> mulog =
-         std::vector<local_scalar_t__>(N, DUMMY_VAR__);
-      std::vector<local_scalar_t__> sigmalog =
-         std::vector<local_scalar_t__>(N, DUMMY_VAR__);
-      current_statement__ = 18;
+                            jacobian__>(0, lp__);
+      local_scalar_t__ omega2 = DUMMY_VAR__;
+      current_statement__ = 10;
+      omega2 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                 0, lp__);
+      local_scalar_t__ omega1 = DUMMY_VAR__;
+      current_statement__ = 11;
+      omega1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                 0, lp__);
+      Eigen::Matrix<local_scalar_t__, -1, 1> mu_x =
+         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
+      Eigen::Matrix<local_scalar_t__, -1, 1> mu =
+         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
+      Eigen::Matrix<local_scalar_t__, -1, 1> sigma =
+         Eigen::Matrix<local_scalar_t__, -1, 1>::Constant(N, DUMMY_VAR__);
+      current_statement__ = 19;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 13;
-        stan::model::assign(mu,
+        current_statement__ = 15;
+        stan::model::assign(mu_x,
           (stan::math::fmax(
              ((((((((value_coeff *
                       stan::model::rvalue(dad_value_numeric,
@@ -389,54 +439,74 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                      stan::model::index_uni(i)))) +
                 (third_place_coeff *
                   stan::model::rvalue(dad_third_place, "dad_third_place",
-                    stan::model::index_uni(i)))) / 2), 0) + 0.00001),
-          "assigning variable mu", stan::model::index_uni(i));
-        current_statement__ = 14;
-        stan::model::assign(sigma, 0.00001,
-          "assigning variable sigma", stan::model::index_uni(i));
-        current_statement__ = 15;
-        stan::model::assign(mulog, 0,
-          "assigning variable mulog", stan::model::index_uni(i));
+                    stan::model::index_uni(i)))) / 4), 0) + 0.003),
+          "assigning variable mu_x", stan::model::index_uni(i));
         current_statement__ = 16;
-        stan::model::assign(sigmalog, 1,
-          "assigning variable sigmalog", stan::model::index_uni(i));
+        stan::model::assign(mu,
+          (((1 -
+              stan::model::rvalue(potential_to_be_rich,
+                "potential_to_be_rich", stan::model::index_uni(i))) *
+             stan::math::log(
+               (stan::math::pow(
+                  stan::model::rvalue(mu_x, "mu_x",
+                    stan::model::index_uni(i)), 2) /
+                 stan::math::sqrt(
+                   (stan::math::pow(
+                      stan::model::rvalue(mu_x, "mu_x",
+                        stan::model::index_uni(i)), 2) +
+                     stan::math::pow(sigma_x, 2)))))) +
+            (stan::model::rvalue(potential_to_be_rich,
+               "potential_to_be_rich", stan::model::index_uni(i)) * omega2)),
+          "assigning variable mu", stan::model::index_uni(i));
+        current_statement__ = 17;
+        stan::model::assign(sigma,
+          (((1 -
+              stan::model::rvalue(potential_to_be_rich,
+                "potential_to_be_rich", stan::model::index_uni(i))) * theta)
+            +
+            (stan::model::rvalue(potential_to_be_rich,
+               "potential_to_be_rich", stan::model::index_uni(i)) * omega1)),
+          "assigning variable sigma", stan::model::index_uni(i));
       }
-      current_statement__ = 9;
-      stan::math::check_greater_or_equal(function__, "mu", mu, 0);
-      current_statement__ = 10;
-      stan::math::check_greater_or_equal(function__, "sigma", sigma, 0);
+      current_statement__ = 12;
+      stan::math::check_greater_or_equal(function__, "mu_x", mu_x, 0);
       {
-        current_statement__ = 23;
-        lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(value_coeff, 0.2, 0.001));
-        current_statement__ = 24;
-        lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(num_of_starts_coeff, 0.4, 0.001));
-        current_statement__ = 25;
-        lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(first_place_coeff, 0.3, 0.001));
         current_statement__ = 26;
         lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(second_place_coeff, 0.3, 0.001));
+          stan::math::normal_lpdf<propto__>(value_coeff, 0.2, 0.001));
         current_statement__ = 27;
         lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(third_place_coeff, 0.3, 0.001));
+          stan::math::normal_lpdf<propto__>(num_of_starts_coeff, 0.4, 0.001));
         current_statement__ = 28;
-        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a0, -1.95, 0.83));
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(first_place_coeff, 0.3, 0.001));
         current_statement__ = 29;
-        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a1, -1.95, 0.83));
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(second_place_coeff, 0.3, 0.001));
         current_statement__ = 30;
-        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a2, -1.95, 0.83));
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(third_place_coeff, 0.3, 0.001));
+        current_statement__ = 31;
+        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a0, -1.95, 0.83));
+        current_statement__ = 32;
+        lp_accum__.add(stan::math::lognormal_lpdf<propto__>(a1, -1.95, 0.83));
         current_statement__ = 33;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(sigma_x, 0.1, 0.01));
+        current_statement__ = 34;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta, 1, 0.1));
+        current_statement__ = 35;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(omega1, 0.1, 0.01));
+        current_statement__ = 36;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(omega2, 0.05, 0.001));
+        current_statement__ = 39;
         for (int j = 1; j <= N; ++j) {
-          current_statement__ = 31;
+          current_statement__ = 37;
           lp_accum__.add(
             stan::math::lognormal_lpdf<propto__>(
               stan::model::rvalue(kid_value, "kid_value",
                 stan::model::index_uni(j)),
-              stan::model::rvalue(mulog, "mulog", stan::model::index_uni(j)),
-              stan::model::rvalue(sigmalog, "sigmalog",
-                stan::model::index_uni(j))));
+              stan::model::rvalue(mu, "mu", stan::model::index_uni(j)),
+              stan::model::rvalue(sigma, "sigma", stan::model::index_uni(j))));
         }
       }
     } catch (const std::exception& e) {
@@ -471,63 +541,79 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     (void) function__;  // suppress unused var warning
     
     try {
-      double a0 = std::numeric_limits<double>::quiet_NaN();
+      double sigma_x = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 1;
-      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+      sigma_x = in__.template read_constrain_lb<local_scalar_t__, 
+                  jacobian__>(0, lp__);
+      double theta = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 2;
+      theta = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                0, lp__);
+      double a0 = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 3;
+      a0 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0,
              lp__);
       double a1 = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 2;
-      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
-             lp__);
-      double a2 = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 3;
-      a2 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0.0,
+      current_statement__ = 4;
+      a1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(0,
              lp__);
       double value_coeff = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 4;
-      value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                      jacobian__>(0.0, lp__);
-      double num_of_starts_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 5;
-      num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                              jacobian__>(0.0, lp__);
-      double first_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      value_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                      jacobian__>(0, lp__);
+      double num_of_starts_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 6;
-      first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0.0, lp__);
-      double second_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      num_of_starts_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                              jacobian__>(0, lp__);
+      double first_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 7;
-      second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                             jacobian__>(0.0, lp__);
-      double third_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      first_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                            jacobian__>(0, lp__);
+      double second_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 8;
+      second_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
+                             jacobian__>(0, lp__);
+      double third_place_coeff = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 9;
       third_place_coeff = in__.template read_constrain_lb<local_scalar_t__, 
-                            jacobian__>(0.0, lp__);
-      std::vector<double> mu =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      std::vector<double> sigma =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      std::vector<double> mulog =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      std::vector<double> sigmalog =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
+                            jacobian__>(0, lp__);
+      double omega2 = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 10;
+      omega2 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                 0, lp__);
+      double omega1 = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 11;
+      omega1 = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
+                 0, lp__);
+      Eigen::Matrix<double, -1, 1> mu_x =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, 1> mu =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, 1> sigma =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
+      out__.write(sigma_x);
+      out__.write(theta);
       out__.write(a0);
       out__.write(a1);
-      out__.write(a2);
       out__.write(value_coeff);
       out__.write(num_of_starts_coeff);
       out__.write(first_place_coeff);
       out__.write(second_place_coeff);
       out__.write(third_place_coeff);
+      out__.write(omega2);
+      out__.write(omega1);
       if (stan::math::logical_negation((stan::math::primitive_value(
             emit_transformed_parameters__) || stan::math::primitive_value(
             emit_generated_quantities__)))) {
         return ;
       } 
-      current_statement__ = 18;
+      current_statement__ = 19;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 13;
-        stan::model::assign(mu,
+        current_statement__ = 15;
+        stan::model::assign(mu_x,
           (stan::math::fmax(
              ((((((((value_coeff *
                       stan::model::rvalue(dad_value_numeric,
@@ -544,44 +630,74 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                      stan::model::index_uni(i)))) +
                 (third_place_coeff *
                   stan::model::rvalue(dad_third_place, "dad_third_place",
-                    stan::model::index_uni(i)))) / 2), 0) + 0.00001),
-          "assigning variable mu", stan::model::index_uni(i));
-        current_statement__ = 14;
-        stan::model::assign(sigma, 0.00001,
-          "assigning variable sigma", stan::model::index_uni(i));
-        current_statement__ = 15;
-        stan::model::assign(mulog, 0,
-          "assigning variable mulog", stan::model::index_uni(i));
+                    stan::model::index_uni(i)))) / 4), 0) + 0.003),
+          "assigning variable mu_x", stan::model::index_uni(i));
         current_statement__ = 16;
-        stan::model::assign(sigmalog, 1,
-          "assigning variable sigmalog", stan::model::index_uni(i));
+        stan::model::assign(mu,
+          (((1 -
+              stan::model::rvalue(potential_to_be_rich,
+                "potential_to_be_rich", stan::model::index_uni(i))) *
+             stan::math::log(
+               (stan::math::pow(
+                  stan::model::rvalue(mu_x, "mu_x",
+                    stan::model::index_uni(i)), 2) /
+                 stan::math::sqrt(
+                   (stan::math::pow(
+                      stan::model::rvalue(mu_x, "mu_x",
+                        stan::model::index_uni(i)), 2) +
+                     stan::math::pow(sigma_x, 2)))))) +
+            (stan::model::rvalue(potential_to_be_rich,
+               "potential_to_be_rich", stan::model::index_uni(i)) * omega2)),
+          "assigning variable mu", stan::model::index_uni(i));
+        current_statement__ = 17;
+        stan::model::assign(sigma,
+          (((1 -
+              stan::model::rvalue(potential_to_be_rich,
+                "potential_to_be_rich", stan::model::index_uni(i))) * theta)
+            +
+            (stan::model::rvalue(potential_to_be_rich,
+               "potential_to_be_rich", stan::model::index_uni(i)) * omega1)),
+          "assigning variable sigma", stan::model::index_uni(i));
       }
-      current_statement__ = 9;
-      stan::math::check_greater_or_equal(function__, "mu", mu, 0);
-      current_statement__ = 10;
-      stan::math::check_greater_or_equal(function__, "sigma", sigma, 0);
+      current_statement__ = 12;
+      stan::math::check_greater_or_equal(function__, "mu_x", mu_x, 0);
       if (emit_transformed_parameters__) {
+        out__.write(mu_x);
         out__.write(mu);
         out__.write(sigma);
-        out__.write(mulog);
-        out__.write(sigmalog);
       } 
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      std::vector<double> kid_value_p =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      current_statement__ = 22;
-      for (int j = 1; j <= N; ++j) {
-        current_statement__ = 20;
+      Eigen::Matrix<double, -1, 1> kid_value_p =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, 1> log_likelihood =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
+      current_statement__ = 25;
+      for (int k = 1; k <= N; ++k) {
+        current_statement__ = 22;
+        stan::model::assign(log_likelihood,
+          stan::math::lognormal_lpdf<false>(
+            stan::model::rvalue(kid_value, "kid_value",
+              stan::model::index_uni(k)),
+            stan::model::rvalue(mu, "mu", stan::model::index_uni(k)),
+            stan::model::rvalue(sigma, "sigma", stan::model::index_uni(k))),
+          "assigning variable log_likelihood", stan::model::index_uni(k));
+        current_statement__ = 23;
         stan::model::assign(kid_value_p,
           stan::math::lognormal_rng(
-            stan::model::rvalue(mulog, "mulog", stan::model::index_uni(j)),
-            stan::model::rvalue(sigmalog, "sigmalog",
-              stan::model::index_uni(j)), base_rng__),
-          "assigning variable kid_value_p", stan::model::index_uni(j));
+            stan::model::rvalue(mu, "mu", stan::model::index_uni(k)),
+            stan::model::rvalue(sigma, "sigma", stan::model::index_uni(k)),
+            base_rng__),
+          "assigning variable kid_value_p", stan::model::index_uni(k));
       }
+      current_statement__ = 20;
+      stan::math::check_greater_or_equal(function__, "kid_value_p",
+                                            kid_value_p, 0);
       out__.write(kid_value_p);
+      out__.write(log_likelihood);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -602,30 +718,39 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
+      local_scalar_t__ sigma_x = DUMMY_VAR__;
+      sigma_x = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0, sigma_x);
+      local_scalar_t__ theta = DUMMY_VAR__;
+      theta = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0, theta);
       local_scalar_t__ a0 = DUMMY_VAR__;
       a0 = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, a0);
+      out__.write_free_lb(0, a0);
       local_scalar_t__ a1 = DUMMY_VAR__;
       a1 = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, a1);
-      local_scalar_t__ a2 = DUMMY_VAR__;
-      a2 = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, a2);
+      out__.write_free_lb(0, a1);
       local_scalar_t__ value_coeff = DUMMY_VAR__;
       value_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, value_coeff);
+      out__.write_free_lb(0, value_coeff);
       local_scalar_t__ num_of_starts_coeff = DUMMY_VAR__;
       num_of_starts_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, num_of_starts_coeff);
+      out__.write_free_lb(0, num_of_starts_coeff);
       local_scalar_t__ first_place_coeff = DUMMY_VAR__;
       first_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, first_place_coeff);
+      out__.write_free_lb(0, first_place_coeff);
       local_scalar_t__ second_place_coeff = DUMMY_VAR__;
       second_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, second_place_coeff);
+      out__.write_free_lb(0, second_place_coeff);
       local_scalar_t__ third_place_coeff = DUMMY_VAR__;
       third_place_coeff = in__.read<local_scalar_t__>();
-      out__.write_free_lb(0.0, third_place_coeff);
+      out__.write_free_lb(0, third_place_coeff);
+      local_scalar_t__ omega2 = DUMMY_VAR__;
+      omega2 = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0, omega2);
+      local_scalar_t__ omega1 = DUMMY_VAR__;
+      omega1 = in__.read<local_scalar_t__>();
+      out__.write_free_lb(0, omega1);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -633,10 +758,10 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     
   inline void get_param_names(std::vector<std::string>& names__) const {
     
-    names__ = std::vector<std::string>{"a0", "a1", "a2", "value_coeff",
-      "num_of_starts_coeff", "first_place_coeff", "second_place_coeff",
-      "third_place_coeff", "mu", "sigma", "mulog", "sigmalog",
-      "kid_value_p"};
+    names__ = std::vector<std::string>{"sigma_x", "theta", "a0", "a1",
+      "value_coeff", "num_of_starts_coeff", "first_place_coeff",
+      "second_place_coeff", "third_place_coeff", "omega2", "omega1", "mu_x",
+      "mu", "sigma", "kid_value_p", "log_likelihood"};
     
     } // get_param_names() 
     
@@ -644,6 +769,7 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
     
     dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{},
       std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
+      }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
       }, std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
       }, std::vector<size_t>{}, std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)},
@@ -659,15 +785,23 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                                       bool emit_generated_quantities__ = true) const
     final {
     
+    param_names__.emplace_back(std::string() + "sigma_x");
+    param_names__.emplace_back(std::string() + "theta");
     param_names__.emplace_back(std::string() + "a0");
     param_names__.emplace_back(std::string() + "a1");
-    param_names__.emplace_back(std::string() + "a2");
     param_names__.emplace_back(std::string() + "value_coeff");
     param_names__.emplace_back(std::string() + "num_of_starts_coeff");
     param_names__.emplace_back(std::string() + "first_place_coeff");
     param_names__.emplace_back(std::string() + "second_place_coeff");
     param_names__.emplace_back(std::string() + "third_place_coeff");
+    param_names__.emplace_back(std::string() + "omega2");
+    param_names__.emplace_back(std::string() + "omega1");
     if (emit_transformed_parameters__) {
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "mu_x" + '.' + std::to_string(sym1__));
+        } 
+      }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "mu" + '.' + std::to_string(sym1__));
@@ -678,22 +812,17 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
           param_names__.emplace_back(std::string() + "sigma" + '.' + std::to_string(sym1__));
         } 
       }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "mulog" + '.' + std::to_string(sym1__));
-        } 
-      }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "sigmalog" + '.' + std::to_string(sym1__));
-        } 
-      }
     }
     
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "kid_value_p" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_likelihood" + '.' + std::to_string(sym1__));
         } 
       }
     }
@@ -706,15 +835,23 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                                         bool emit_generated_quantities__ = true) const
     final {
     
+    param_names__.emplace_back(std::string() + "sigma_x");
+    param_names__.emplace_back(std::string() + "theta");
     param_names__.emplace_back(std::string() + "a0");
     param_names__.emplace_back(std::string() + "a1");
-    param_names__.emplace_back(std::string() + "a2");
     param_names__.emplace_back(std::string() + "value_coeff");
     param_names__.emplace_back(std::string() + "num_of_starts_coeff");
     param_names__.emplace_back(std::string() + "first_place_coeff");
     param_names__.emplace_back(std::string() + "second_place_coeff");
     param_names__.emplace_back(std::string() + "third_place_coeff");
+    param_names__.emplace_back(std::string() + "omega2");
+    param_names__.emplace_back(std::string() + "omega1");
     if (emit_transformed_parameters__) {
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "mu_x" + '.' + std::to_string(sym1__));
+        } 
+      }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "mu" + '.' + std::to_string(sym1__));
@@ -725,16 +862,6 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
           param_names__.emplace_back(std::string() + "sigma" + '.' + std::to_string(sym1__));
         } 
       }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "mulog" + '.' + std::to_string(sym1__));
-        } 
-      }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "sigmalog" + '.' + std::to_string(sym1__));
-        } 
-      }
     }
     
     if (emit_generated_quantities__) {
@@ -743,19 +870,24 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
           param_names__.emplace_back(std::string() + "kid_value_p" + '.' + std::to_string(sym1__));
         } 
       }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_likelihood" + '.' + std::to_string(sym1__));
+        } 
+      }
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a2\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"mulog\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"sigmalog\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"sigma_x\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"omega2\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"omega1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu_x\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"log_likelihood\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a2\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"mulog\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"sigmalog\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"sigma_x\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"omega2\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"omega1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu_x\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"kid_value_p\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"log_likelihood\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -769,10 +901,10 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                             const bool emit_generated_quantities = true,
                             std::ostream* pstream = nullptr) const {
       const size_t num_params__ = 
-  (((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+  ((((((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
       const size_t num_transformed = 
-  (((N + N) + N) + N);
-      const size_t num_gen_quantities = N;
+  ((N + N) + N);
+      const size_t num_gen_quantities = (N + N);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -791,10 +923,10 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                             bool emit_generated_quantities = true,
                             std::ostream* pstream = nullptr) const {
       const size_t num_params__ = 
-  (((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+  ((((((((((1 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
       const size_t num_transformed = 
-  (((N + N) + N) + N);
-      const size_t num_gen_quantities = N;
+  ((N + N) + N);
+      const size_t num_gen_quantities = (N + N);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));
@@ -830,11 +962,11 @@ class model2_fit_ver2_model final : public model_base_crtp<model2_fit_ver2_model
                               std::vector<int>& params_i,
                               std::vector<double>& vars,
                               std::ostream* pstream__ = nullptr) const {
-     constexpr std::array<const char*, 8> names__{"a0", "a1", "a2",
-      "value_coeff", "num_of_starts_coeff", "first_place_coeff",
-      "second_place_coeff", "third_place_coeff"};
-      const std::array<Eigen::Index, 8> constrain_param_sizes__{1, 1, 
-       1, 1, 1, 1, 1, 1};
+     constexpr std::array<const char*, 11> names__{"sigma_x", "theta", "a0",
+      "a1", "value_coeff", "num_of_starts_coeff", "first_place_coeff",
+      "second_place_coeff", "third_place_coeff", "omega2", "omega1"};
+      const std::array<Eigen::Index, 11> constrain_param_sizes__{1, 1, 
+       1, 1, 1, 1, 1, 1, 1, 1, 1};
       const auto num_constrained_params__ = std::accumulate(
         constrain_param_sizes__.begin(), constrain_param_sizes__.end(), 0);
     
