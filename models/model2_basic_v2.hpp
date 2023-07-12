@@ -10,26 +10,26 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 21> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 2, column 4 to column 64)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 3, column 4 to column 51)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 4, column 4 to column 63)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 5, column 4 to column 61)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 6, column 4 to column 57)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 7, column 4 to column 56)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 8, column 4 to column 52)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 9, column 4 to column 52)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 11, column 4 to column 56)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 12, column 4 to column 63)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 13, column 4 to column 60)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 14, column 4 to column 62)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 15, column 4 to column 61)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 16, column 4 to column 53)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 17, column 4 to column 51)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 19, column 4 to line 23, column 63)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 25, column 4 to column 52)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 27, column 4 to column 105)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 28, column 4 to column 78)",
- " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 30, column 4 to column 46)"};
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 4, column 4 to column 64)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 5, column 4 to column 51)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 6, column 4 to column 63)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 7, column 4 to column 61)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 8, column 4 to column 57)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 9, column 4 to column 56)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 10, column 4 to column 52)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 11, column 4 to column 52)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 13, column 4 to column 56)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 14, column 4 to column 63)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 15, column 4 to column 60)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 16, column 4 to column 62)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 17, column 4 to column 61)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 18, column 4 to column 73)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 19, column 4 to column 74)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 21, column 4 to line 25, column 63)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 27, column 4 to column 50)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 29, column 4 to column 102)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 30, column 4 to column 78)",
+ " (in '/home/racehorse_bayes/models/model2_basic_v2.stan', line 32, column 4 to column 52)"};
 
 
 
@@ -170,39 +170,43 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
       double third_place_coeff = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 13;
       third_place_coeff = stan::math::normal_rng(0.3, 0.01, base_rng__);
-      double omega2 = std::numeric_limits<double>::quiet_NaN();
+      double potential_rich_mulog_coeff =
+         std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 14;
-      omega2 = stan::math::normal_rng(0.05, 0.001, base_rng__);
-      double omega1 = std::numeric_limits<double>::quiet_NaN();
+      potential_rich_mulog_coeff = stan::math::normal_rng(0.05, 0.001,
+                                     base_rng__);
+      double potential_rich_sigmalog_coeff =
+         std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 15;
-      omega1 = stan::math::normal_rng(0.1, 0.01, base_rng__);
-      double mu_x = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 16;
-      mu_x = (stan::math::fmax(
-                ((((((((value_coeff * value) + a0) - a1) +
-                      (num_of_starts_coeff * num_of_starts)) +
-                     (first_place_coeff * first_place)) +
-                    (second_place_coeff * second_place)) +
-                   (third_place_coeff * third_place)) / 4), 0) + 0.003);
-      double sigma_x = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 17;
-      sigma_x = stan::math::normal_rng(0.1, 0.01, base_rng__);
+      potential_rich_sigmalog_coeff = stan::math::normal_rng(0.1, 0.01,
+                                        base_rng__);
       double mu = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 18;
-      mu = (((1 - potential_rich) *
-              stan::math::log(
-                (stan::math::pow(mu_x, 2) /
-                  stan::math::sqrt(
-                    (stan::math::pow(mu, 2) + stan::math::pow(sigma_x, 2))))))
-             + (potential_rich * omega2));
+      current_statement__ = 16;
+      mu = (stan::math::fmax(
+              ((((((((value_coeff * value) + a0) - a1) +
+                    (num_of_starts_coeff * num_of_starts)) +
+                   (first_place_coeff * first_place)) +
+                  (second_place_coeff * second_place)) +
+                 (third_place_coeff * third_place)) / 4), 0) + 0.003);
       double sigma = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 17;
+      sigma = stan::math::normal_rng(0.1, 0.01, base_rng__);
+      double mulog = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 18;
+      mulog = (((1 - potential_rich) *
+                 stan::math::log(
+                   (stan::math::pow(mu, 2) /
+                     stan::math::sqrt(
+                       (stan::math::pow(mu, 2) + stan::math::pow(sigma, 2))))))
+                + (potential_rich * 0.05));
+      double sigmalog = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 19;
-      sigma = (((1 - potential_rich) *
-                 stan::math::normal_rng(1, 0.1, base_rng__)) +
-                (potential_rich * omega1));
+      sigmalog = (((1 - potential_rich) *
+                    stan::math::normal_rng(1, 0.1, base_rng__)) +
+                   (potential_rich * 0.1));
       double kid_value = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 20;
-      kid_value = stan::math::lognormal_rng(mu, sigma, base_rng__);
+      kid_value = stan::math::lognormal_rng(mulog, sigmalog, base_rng__);
       current_statement__ = 1;
       stan::math::check_greater_or_equal(function__, "potential_rich",
                                             potential_rich, 0);
@@ -243,13 +247,16 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
       stan::math::check_greater_or_equal(function__, "third_place_coeff",
                                             third_place_coeff, 0.0);
       current_statement__ = 14;
-      stan::math::check_greater_or_equal(function__, "omega2", omega2, 0.0);
+      stan::math::check_greater_or_equal(function__, "potential_rich_mulog_coeff",
+                                            potential_rich_mulog_coeff, 0.0);
       current_statement__ = 15;
-      stan::math::check_greater_or_equal(function__, "omega1", omega1, 0.0);
+      stan::math::check_greater_or_equal(function__, "potential_rich_sigmalog_coeff",
+                                            potential_rich_sigmalog_coeff,
+                                            0.0);
       current_statement__ = 16;
-      stan::math::check_greater_or_equal(function__, "mu_x", mu_x, 0);
+      stan::math::check_greater_or_equal(function__, "mu", mu, 0);
       current_statement__ = 17;
-      stan::math::check_greater_or_equal(function__, "sigma_x", sigma_x, 0.0);
+      stan::math::check_greater_or_equal(function__, "sigma", sigma, 0.0);
       out__.write(potential_rich);
       out__.write(value);
       out__.write(num_of_starts);
@@ -263,12 +270,12 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
       out__.write(first_place_coeff);
       out__.write(second_place_coeff);
       out__.write(third_place_coeff);
-      out__.write(omega2);
-      out__.write(omega1);
-      out__.write(mu_x);
-      out__.write(sigma_x);
+      out__.write(potential_rich_mulog_coeff);
+      out__.write(potential_rich_sigmalog_coeff);
       out__.write(mu);
       out__.write(sigma);
+      out__.write(mulog);
+      out__.write(sigmalog);
       out__.write(kid_value);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -300,8 +307,9 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
     names__ = std::vector<std::string>{"potential_rich", "value",
       "num_of_starts", "first_place", "second_place", "third_place", "a0",
       "a1", "value_coeff", "num_of_starts_coeff", "first_place_coeff",
-      "second_place_coeff", "third_place_coeff", "omega2", "omega1", "mu_x",
-      "sigma_x", "mu", "sigma", "kid_value"};
+      "second_place_coeff", "third_place_coeff",
+      "potential_rich_mulog_coeff", "potential_rich_sigmalog_coeff", "mu",
+      "sigma", "mulog", "sigmalog", "kid_value"};
     
     } // get_param_names() 
     
@@ -343,12 +351,12 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
       param_names__.emplace_back(std::string() + "first_place_coeff");
       param_names__.emplace_back(std::string() + "second_place_coeff");
       param_names__.emplace_back(std::string() + "third_place_coeff");
-      param_names__.emplace_back(std::string() + "omega2");
-      param_names__.emplace_back(std::string() + "omega1");
-      param_names__.emplace_back(std::string() + "mu_x");
-      param_names__.emplace_back(std::string() + "sigma_x");
+      param_names__.emplace_back(std::string() + "potential_rich_mulog_coeff");
+      param_names__.emplace_back(std::string() + "potential_rich_sigmalog_coeff");
       param_names__.emplace_back(std::string() + "mu");
       param_names__.emplace_back(std::string() + "sigma");
+      param_names__.emplace_back(std::string() + "mulog");
+      param_names__.emplace_back(std::string() + "sigmalog");
       param_names__.emplace_back(std::string() + "kid_value");
     }
     
@@ -379,12 +387,12 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
       param_names__.emplace_back(std::string() + "first_place_coeff");
       param_names__.emplace_back(std::string() + "second_place_coeff");
       param_names__.emplace_back(std::string() + "third_place_coeff");
-      param_names__.emplace_back(std::string() + "omega2");
-      param_names__.emplace_back(std::string() + "omega1");
-      param_names__.emplace_back(std::string() + "mu_x");
-      param_names__.emplace_back(std::string() + "sigma_x");
+      param_names__.emplace_back(std::string() + "potential_rich_mulog_coeff");
+      param_names__.emplace_back(std::string() + "potential_rich_sigmalog_coeff");
       param_names__.emplace_back(std::string() + "mu");
       param_names__.emplace_back(std::string() + "sigma");
+      param_names__.emplace_back(std::string() + "mulog");
+      param_names__.emplace_back(std::string() + "sigmalog");
       param_names__.emplace_back(std::string() + "kid_value");
     }
     
@@ -392,13 +400,13 @@ class model2_basic_v2_model final : public model_base_crtp<model2_basic_v2_model
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"potential_rich\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"omega2\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"omega1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu_x\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma_x\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"potential_rich\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"potential_rich_mulog_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"potential_rich_sigmalog_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mulog\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigmalog\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"potential_rich\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"omega2\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"omega1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu_x\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma_x\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"potential_rich\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a0\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"a1\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"value_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"num_of_starts_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"first_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"second_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"third_place_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"potential_rich_mulog_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"potential_rich_sigmalog_coeff\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mulog\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"sigmalog\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"kid_value\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
