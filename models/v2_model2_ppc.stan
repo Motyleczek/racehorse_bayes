@@ -27,14 +27,14 @@ generated quantities {
    real mum_sp_coef = normal_rng(0,0.3);
    real mum_tp_coef = normal_rng(0,0.3);
    real mum_val_coef = normal_rng(0,0.3);
-   real alpha = normal_rng(0.003, 0.001);
+   real alpha = normal_rng(0.0005, 0.02);
 
 
     vector[N] mu;
-    real sigma = exponential_rng(0.1);
+    real sigma = exponential_rng(1000);
     array[N] real<lower=0> output;
    
-      mu = (dad_ns_coef*dad_ns +
+      mu = 0.15*(dad_ns_coef*dad_ns +
                 dad_fp_coef*dad_fp +
                 dad_sp_coef*dad_sp +
                 dad_tp_coef*dad_tp +
@@ -45,5 +45,5 @@ generated quantities {
                 mum_tp_coef*mum_tp +
                 mum_val_coef*mum_val+alpha);
 
-     output = fabs(normal_rng(mu,sigma));
+     output = fabs(normal_rng(mu,0.01));
 }

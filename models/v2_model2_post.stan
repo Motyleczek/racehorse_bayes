@@ -39,7 +39,7 @@ transformed parameters{
 vector[N] mu;
     
 for(i in 1:N){
-        mu[i] = (dad_ns_coef*dad_ns[i] +
+        mu[i] = 0.1*(dad_ns_coef*dad_ns[i] +
                 dad_fp_coef*dad_fp[i] +
                 dad_sp_coef*dad_sp[i] +
                 dad_tp_coef*dad_tp[i] +
@@ -66,10 +66,10 @@ model {
    mum_tp_coef ~normal(0,0.3);
    mum_val_coef ~normal(0,0.3);
 
-   alpha ~ normal(0.003, 0.001);
-   sigma  ~ exponential(0.1);
+   alpha ~ normal(0.0005, 0.02);
+   sigma  ~ exponential(1000);
     for (k in 1:N){
-        output ~ normal(mu[k],sigma);
+        output ~ normal(mu[k],0.01);
     }
 }
 
@@ -78,7 +78,7 @@ generated quantities {
     array[N] real log_likelyhood;
     for (n in 1:N)
     {   
-        log_likelyhood[n] = normal_lpdf(output[n] | mu[n], sigma);
-        output_pred[n] = fabs(normal_rng(mu[n],sigma));
+        log_likelyhood[n] = normal_lpdf(output[n] | mu[n], 0.01);
+        output_pred[n] = fabs(normal_rng(mu[n],0.01));
     }
 }
