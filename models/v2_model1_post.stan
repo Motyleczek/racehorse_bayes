@@ -14,7 +14,7 @@ data{
     vector[N] mum_sp; 
     vector[N] mum_tp; 
     vector[N] mum_val; 
-    vector[N] seks;
+    vector[N] output;
 }
 parameters{
     real dad_ns_coef;
@@ -49,10 +49,7 @@ for(i in 1:N){
                 mum_sp_coef*mum_sp[i]+
                 mum_tp_coef*mum_tp[i] +
                 mum_val_coef*mum_val[i]+alpha);
-
-}    
-
-
+        }    
 }
 
 model {
@@ -63,30 +60,25 @@ model {
    dad_tp_coef ~normal(0,0.3);
    dad_val_coef ~normal(0,0.3);
 
-
    mum_ns_coef ~normal(0,0.3);
    mum_fp_coef ~normal(0,0.3);
    mum_sp_coef ~normal(0,0.3);
    mum_tp_coef ~normal(0,0.3);
    mum_val_coef ~normal(0,0.3);
-   alpha ~ normal(-1.5, 0.01);
-   sigma  ~ exponential(0.5);
-    for (k in 1:N){
-        seks ~ lognormal(mu[k],sigma);
-    }
 
-    // real nu = gamma_rng(0.5,0.5);
+   alpha ~ normal(0.003, 0.001);
+   sigma  ~ exponential(0.1);
+    for (k in 1:N){
+        output ~ lognormal(mu[k],sigma);
+    }
 }
 
 generated quantities {
-   
-  
-    array[N] real seks_pred;
+    array[N] real output_pred;
+    array[N] real log_likelyhood;
     for (n in 1:N)
-    {
-         seks_pred[n] = lognormal_rng(mu[n],sigma);
+    {   
+        log_likelyhood[n] = lognormal_lpdf(output[n] | mu[n], sigma);
+        output_pred[n] = lognormal_rng(mu[n],sigma);
     }
-
-    
-//    ???????????????????????????????????????????/
 }
