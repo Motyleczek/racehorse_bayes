@@ -48,12 +48,11 @@ for(i in 1:N){
                 mum_fp_coef*mum_fp[i] +
                 mum_sp_coef*mum_sp[i]+
                 mum_tp_coef*mum_tp[i] +
-                mum_val_coef*mum_val[i]+alpha);
+                mum_val_coef*mum_val[i])+alpha;
         }    
 }
 
 model {
-
    dad_ns_coef ~normal(0,0.3);
    dad_fp_coef ~normal(0,0.3);
    dad_sp_coef ~normal(0,0.3);
@@ -66,11 +65,11 @@ model {
    mum_tp_coef ~normal(0,0.3);
    mum_val_coef ~normal(0,0.3);
 
-   alpha ~ normal(0.2, 0.06);
-   sigma  ~ normal(0.1, 0.003);
+   alpha ~ normal(0.003, 0.001);
+   sigma  ~ normal(0.1, 0.03);
     for (k in 1:N){
         // output ~ normal(mu[k],0.01);
-        output ~ normal(mu[k], sigma);
+        output ~ normal(mu[k], fabs(sigma));
     }
 }
 
@@ -79,7 +78,7 @@ generated quantities {
     array[N] real log_likelyhood;
     for (n in 1:N)
     {   
-        log_likelyhood[n] = normal_lpdf(output[n] | mu[n], sigma);
-        output_pred[n] = fabs(normal_rng(mu[n], sigma));
+        log_likelyhood[n] = normal_lpdf(output[n] | mu[n], fabs(sigma));
+        output_pred[n] = fabs(normal_rng(mu[n], fabs(sigma)));
     }
 }
