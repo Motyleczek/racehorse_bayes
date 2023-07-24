@@ -45,5 +45,5 @@ generated quantities {
                 mum_tp_coef*mum_tp +
                 mum_val_coef*mum_val+alpha);
 
-     output = fabs(normal_rng(mu,0.01));
+     output = fabs(normal_rng(mu,0.001));
 }
